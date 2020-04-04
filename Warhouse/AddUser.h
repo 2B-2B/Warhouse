@@ -27,7 +27,7 @@ namespace Warhouse {
 	private: System::Windows::Forms::TextBox^ usernameTextBox;
 	private: System::Windows::Forms::Label^ passwordLabel;
 	private: System::Windows::Forms::Label^ usernameLabel;
-		   bool* thisXPushed = nullptr;
+    bool* thisXPushed = nullptr;
 	public:
 		AddUser(void)
 		{
@@ -57,21 +57,6 @@ namespace Warhouse {
 				delete components;
 			}
 		}
-
-
-
-
-
-
-
-
-
-	protected:
-
-
-
-
-	protected:
 
 	private:
 		/// <summary>
@@ -242,8 +227,6 @@ private: System::Void AddUser_VisibleChanged(System::Object^ sender, System::Eve
 	//
 	//TODO: Add initalization code
 	//
-}
-private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
