@@ -242,8 +242,12 @@ namespace Warhouse {
 		std::ofstream usersList;
 		msclr::interop::marshal_context context;
 		std::ifstream warehouses;
+
+		//Opens the required text files
 		warehouses.open("WarehouseInventory.txt");
 		usersList.open("userList.txt", std::ios::app);
+
+		//Gets the entered data from the gui
 		System::String^ userName = this->usernameTextBox->Text;
 		std::string userNameString = context.marshal_as<std::string>(userName);
 		System::String^ password = this->usernameTextBox->Text;
@@ -251,6 +255,7 @@ namespace Warhouse {
 		System::String^ adress = this->warehouseComboBox->Text;
 		std::string adressString = context.marshal_as<std::string>(adress);
 		
+		//Gets the data for th entered adress from the textfile
 		bool runLoop = true;
 		while (!warehouses.eof() && runLoop)
 		{
@@ -262,6 +267,8 @@ namespace Warhouse {
 			std::getline(warehouses, city, ',');
 			std::getline(warehouses, province, ',');
 			std::getline(warehouses, postalCode);
+
+			//Appends the new user to the users text file
 			if (adressFile == adressString)
 			{
 				usersList << "\n" << userNameString << "," << passwordString << ",";
@@ -288,11 +295,9 @@ namespace Warhouse {
 	private: System::Void AddUser_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
 		//Adds the warehouse adresses to the warehouseComboBox
 		std::ifstream warehouses;
+		//opens the warehouses text file
 		warehouses.open("WarehouseInventory.txt");
-		if (warehouses)
-		{
-			std::cout << "Opened file" << std::endl;
-		}
+		//Grabs all the adresses
 		while (!warehouses.eof())
 		{
 			std::string line;
@@ -301,6 +306,7 @@ namespace Warhouse {
 			std::getline(warehouses, line, ',');
 			std::getline(warehouses, line, ',');
 			std::getline(warehouses, line);
+			//adds the addresses to the combo box
 			this->warehouseComboBox->Items->Add(str2);
 		}
 		warehouses.close();
