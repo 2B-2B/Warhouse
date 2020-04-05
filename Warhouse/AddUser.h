@@ -2,9 +2,8 @@
 
 #include <iostream>
 #include <fstream>
-
 #include <string>
-
+#include <msclr\marshal_cppstd.h>
 
 namespace Warhouse {
 
@@ -236,14 +235,55 @@ namespace Warhouse {
 		*thisGui = 6; //Sets gui to open ManageUsers
 		this->Close(); //Closes this gui
 	}
+
 		   //Adds the user to the database, closes the gui and goes to the previus gui 
 	private: System::Void addButton_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		//appends the new user to the text file
+		std::ofstream usersList;
+		msclr::interop::marshal_context context;
+		std::ifstream warehouses;
+		warehouses.open("WarehouseInventory.txt");
+		usersList.open("userList.txt", std::ios::app);
+		System::String^ userName = this->usernameTextBox->Text;
+		std::string userNameString = context.marshal_as<std::string>(userName);
+		System::String^ password = this->usernameTextBox->Text;
+		std::string passwordString = context.marshal_as<std::string>(password);
+		System::String^ adress = this->warehouseComboBox->Text;
+		std::string adressString = context.marshal_as<std::string>(adress);
+		
+		bool runLoop = true;
+		while (!warehouses.eof() && runLoop)
+		{
+			std::string adressFile;
+			std::string city;
+			std::string province;
+			std::string postalCode;
+			std::getline(warehouses, adressFile, ',');
+			std::getline(warehouses, city, ',');
+			std::getline(warehouses, province, ',');
+			std::getline(warehouses, postalCode);
+			if (adressFile == adressString)
+			{
+				usersList << "\n" << userNameString << "," << passwordString << ",";
+				if (this->adminAccessRadioButton->Checked)
+				{
+					usersList << "admin" << "," << adressFile << "," << city << "," << province << "," << postalCode;
+				}
+				else
+				{
+					usersList << "general" << "," << adressFile << "," << city << "," << province << "," << postalCode;
+				}
+				runLoop = false;
+			}
+		}
+		warehouses.close();
+		usersList.close();
 
 		*thisXPushed = false; //Tells the driver program that the gui was not closed
 		*thisGui = 6; //Sets gui to open ManageUsers
 		this->Close(); //Closes this gui
 	}
+
 		   //Initalizing the gui with the values from the data base
 	private: System::Void AddUser_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
 		//Adds the warehouse adresses to the warehouseComboBox
@@ -264,7 +304,6 @@ namespace Warhouse {
 			this->warehouseComboBox->Items->Add(str2);
 		}
 		warehouses.close();
-
 		//initalized the text file.
 
 		
