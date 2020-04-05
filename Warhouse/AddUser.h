@@ -45,21 +45,6 @@ namespace Warhouse {
 		AddUser(int* gui, bool* xPushed)
 		{
 			InitializeComponent();
-			
-			std::ifstream warehouses;
-			warehouses.open("Resource Files/WarehouseInventory.txt");
-			while (!warehouses.eof())
-			{
-				std::string line;
-				std::getline(warehouses, line, ',');
-				String^ str2 = gcnew String(line.c_str());
-				std::getline(warehouses, line, ',');
-				std::getline(warehouses, line, ',');
-				std::getline(warehouses, line);
-				this->warehouseComboBox->Items->Add(str2);
-			}
-			warehouses.close();
-
 			//
 			//TODO: Add the constructor code here
 			//
@@ -132,7 +117,6 @@ namespace Warhouse {
 			// warehouseComboBox
 			// 
 			this->warehouseComboBox->FormattingEnabled = true;
-			this->warehouseComboBox->Items->Add("Bob");
 			this->warehouseComboBox->Location = System::Drawing::Point(130, 94);
 			this->warehouseComboBox->Name = L"warehouseComboBox";
 			this->warehouseComboBox->Size = System::Drawing::Size(136, 28);
@@ -146,6 +130,7 @@ namespace Warhouse {
 			this->addButton->TabIndex = 30;
 			this->addButton->Text = L"Add";
 			this->addButton->UseVisualStyleBackColor = true;
+			this->addButton->Click += gcnew System::EventHandler(this, &AddUser::addButton_Click);
 			// 
 			// backButton
 			// 
@@ -155,6 +140,7 @@ namespace Warhouse {
 			this->backButton->TabIndex = 29;
 			this->backButton->Text = L"Back";
 			this->backButton->UseVisualStyleBackColor = true;
+			this->backButton->Click += gcnew System::EventHandler(this, &AddUser::backButton_Click);
 			// 
 			// adminAccessRadioButton
 			// 
@@ -252,7 +238,7 @@ namespace Warhouse {
 	}
 		   //Adds the user to the database, closes the gui and goes to the previus gui 
 	private: System::Void addButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		std::string 
+
 
 		*thisXPushed = false; //Tells the driver program that the gui was not closed
 		*thisGui = 6; //Sets gui to open ManageUsers
@@ -260,8 +246,25 @@ namespace Warhouse {
 	}
 		   //Initalizing the gui with the values from the data base
 	private: System::Void AddUser_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
-		
-		
+		//Adds the warehouse adresses to the warehouseComboBox
+		std::ifstream warehouses;
+		warehouses.open("WarehouseInventory.txt");
+		if (warehouses)
+		{
+			std::cout << "Opened file" << std::endl;
+		}
+		while (!warehouses.eof())
+		{
+			std::string line;
+			std::getline(warehouses, line, ',');
+			String^ str2 = gcnew String(line.c_str());
+			std::getline(warehouses, line, ',');
+			std::getline(warehouses, line, ',');
+			std::getline(warehouses, line);
+			this->warehouseComboBox->Items->Add(str2);
+		}
+		warehouses.close();
+
 		//initalized the text file.
 
 		
