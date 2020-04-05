@@ -117,6 +117,21 @@ namespace Warhouse {
 			// warehouseComboBox
 			// 
 			this->warehouseComboBox->FormattingEnabled = true;
+			this->warehouseComboBox->Items->Add("Bob");
+			std::ifstream warehouses;
+			warehouses.open("");
+			while (!warehouses.eof())
+			{
+				std::string line;
+				std::getline(warehouses,line,',');
+				String^ str2 = gcnew String(line.c_str());
+				std::getline(warehouses, line, ',');
+				std::getline(warehouses, line, ',');
+				std::getline(warehouses, line);
+				this->warehouseComboBox->Items->Add(str2);
+			}
+			warehouses.close();
+
 			this->warehouseComboBox->Location = System::Drawing::Point(130, 94);
 			this->warehouseComboBox->Name = L"warehouseComboBox";
 			this->warehouseComboBox->Size = System::Drawing::Size(136, 28);
@@ -236,13 +251,7 @@ namespace Warhouse {
 	}
 		   //Adds the user to the database, closes the gui and goes to the previus gui 
 	private: System::Void addButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		
-		//add the refernece to the file
-
-
-
-
-
+		std::string 
 
 		*thisXPushed = false; //Tells the driver program that the gui was not closed
 		*thisGui = 6; //Sets gui to open ManageUsers
