@@ -87,8 +87,8 @@ namespace Warhouse {
 		
 
 		//this is get the inventory of the warehouse
-		//void getWarehouseInventory();
-		//void getNumberOfItems(std::ifstream* userData);
+		void getWarehouseInventory();
+		void getNumberOfItems(std::ifstream* userData);
 
 		//void getUsersWarehouse(Users** currentUsers )
 
@@ -290,11 +290,9 @@ private: System::Void Display_VisibleChanged(System::Object^ sender, System::Eve
 	ostalCodeDisplayLabel->Text = "Postal Code: " + usersWarehouse->getPostalCodeSS();
 
 	//get the inventory from the warehouse
-	//getWarehouseInventory();
+	getWarehouseInventory();
 
-	std::cout << usersWarehouse->printDimensions();
 }
-
 
 };
 }
