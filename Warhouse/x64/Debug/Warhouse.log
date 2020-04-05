@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 ﻿  AdminConsole.cpp
   Source.cpp
   Generating Code...
   AddUser.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Warhouse.vcxproj -> C:\Users\ryan_\Desktop\File Base Project\Warhouse\x64\Debug\Warhouse.exe
+=======
+﻿  Warhouse.vcxproj -> C:\Users\aavin\OneDrive\Desktop\Warhouse\x64\Debug\Warhouse.exe
+>>>>>>> 4d76b0daaaf23f995fbc18435c1be4e018065f69
