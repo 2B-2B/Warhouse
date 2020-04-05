@@ -1,1 +1,14 @@
+<<<<<<< HEAD
 ﻿  Warhouse.vcxproj -> C:\Users\ryan_\Desktop\File Base Project\Warhouse\x64\Debug\Warhouse.exe
+=======
+﻿  Display.cpp
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\Display.h(280,1): error C2661: 'Warehouse::Warehouse': no overloaded function takes 3 arguments
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\Display.cpp(188,109): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Warehouse'
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\Display.cpp(188,109): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+  Source.cpp
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\Display.h(280,1): error C2661: 'Warehouse::Warehouse': no overloaded function takes 3 arguments
+  Users.cpp
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\Users.cpp(54,190): error C2661: 'Warehouse::Warehouse': no overloaded function takes 3 arguments
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\Users.cpp(74,211): error C2661: 'Warehouse::Warehouse': no overloaded function takes 3 arguments
+  Generating Code...
+>>>>>>> 3f94440ee735ec0fefa31817406f5d3407ea42b9
