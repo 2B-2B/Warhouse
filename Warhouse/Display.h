@@ -1,5 +1,12 @@
 #pragma once
 
+#include <iostream>
+#include <fstream>
+#include <string>
+#include "Warehouse.h"
+#include "Users.h"
+
+
 
 namespace Warhouse {
 
@@ -15,9 +22,37 @@ namespace Warhouse {
 	/// </summary>
 	public ref class Display : public System::Windows::Forms::Form
 	{
+	private:
+
 		//Variable declaration
 		int* thisGui = nullptr;
 		bool* thisXPushed = nullptr;
+		bool* isGeneral = nullptr;
+
+		//pointer to the objects
+		//Dimentional* twoByFour = nullptr;
+		//Dimentional* fourByFour = nullptr;
+		
+		//the current logged in user
+		Users* currentUser;
+
+		//the warehous of the currently logged in user
+		Warehouse* usersWarehouse;
+		Dimentional* dimentionalWood;
+		Plywood* plywoodWood;
+		Rail* railWood;
+		Finishing* finishingWood;
+
+		int* numberOfItems;
+
+
+
+
+
+
+
+
+
 	public:
 		Display(void)
 		{
@@ -26,25 +61,49 @@ namespace Warhouse {
 			//TODO: Add the constructor code here
 			//
 		}
-		Display(int* gui, bool* xPushed)
-		{
+
+		//non default constructer
+		Display(int* gui, bool* xPushed, bool* isGeneral, Users* currentUser) {
+			
 			InitializeComponent();
-			//
-			//TODO: Add the constructor code here
-			//
+
+			//setting everuthing up
 			thisGui = gui;
 			thisXPushed = xPushed;
+			this->isGeneral = isGeneral;
+
+			//seeting the current user
+			this->currentUser = currentUser;
+
+
+
+			//Dimentional twoByFour = Dimentional(2, 4, 8, "pressure treated", 6.50, 500);
+		   // Dimentional fourByFour = Dimentional(4, 4, 8, "pressure treated", 10.50, 300);
+
+		   // this->twoByFour = &twoByFour;
+		   // this->fourByFour = &fourByFour;
+
 		}
+		
+
+		//this is get the inventory of the warehouse
+		void getWarehouseInventory();
+		void getNumberOfItems(std::ifstream* userData);
+
+		//void getUsersWarehouse(Users** currentUsers )
 
 	protected:
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
+		
+		//destructer
 		~Display()
 		{
 			if (components)
 			{
 				delete components;
+
+				delete usersWarehouse;
+				
+
 			}
 		}
 	private: System::Windows::Forms::Label^ ityDisplayLabel;
@@ -52,6 +111,7 @@ namespace Warhouse {
 
 	protected:
 
+		//declaring the object displayed on the screen
 	private: System::Windows::Forms::Label^ ostalCodeDisplayLabel;
 	private: System::Windows::Forms::Label^ provinceDisplayLAbel;
 	private: System::Windows::Forms::Label^ addresDisplayLabel;
@@ -65,16 +125,11 @@ namespace Warhouse {
 
 
 	private:
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
+
+		//this function is needed to display the object on the screen
 		void InitializeComponent(void)
 		{
 			this->ityDisplayLabel = (gcnew System::Windows::Forms::Label());
@@ -184,6 +239,9 @@ namespace Warhouse {
 
 		}
 #pragma endregion
+
+		//these are the listeners
+
 		//Closes the gui and goes to the Order gui 
 private: System::Void orderButton_Click(System::Object^ sender, System::EventArgs^ e) {
 	*thisXPushed = false; //Tells the driver program that the gui was not closed
@@ -192,21 +250,45 @@ private: System::Void orderButton_Click(System::Object^ sender, System::EventArg
 }
 	    //Closes the gui and goes to the Ship gui 
 private: System::Void shipButton_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+
 	*thisXPushed = false; //Tells the driver program that the gui was not closed
 	*thisGui = 9; //Sets gui to open Ship
 	this->Close(); //Closes this gui
 }
 	    //Closes the gui and goes to the previus gui 
 private: System::Void backButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	*thisXPushed = false; //Tells the driver program that the gui was not closed
-	*thisGui = 3; //Sets gui to open AdminConsole
-	this->Close(); //Closes this gui
+
+	//if they are general dont allow them to go back
+	if (!isGeneral) {
+
+		*thisXPushed = false; //Tells the driver program that the gui was not closed
+		*thisGui = 3; //Sets gui to open AdminConsole
+		this->Close(); //Closes this gui
+	}
 }
 	    //Initalizing the gui with the values from the data base
 private: System::Void Display_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
-	//
-	//TODO: Add initalization code
-	//
+	
+	//reinitalize the two by four with the current values of the 
+	//*twoByFour = Dimentional(2, 4, 8, "pressure treated", 6.50, 500);
+	//*fourByFour = Dimentional(4, 4, 8, "pressure treated", 10.50, 300);
+
+	
+	//create the warehouse object
+	usersWarehouse = new Warehouse(currentUser->getAddress(), currentUser->getProvince(), currentUser->getPostalCode());
+
+	//display the info of the warehouse on the screen
+	addresDisplayLabel->Text = "Address: " + usersWarehouse->getAddressSS();
+	provinceDisplayLAbel->Text = "Province: " + usersWarehouse->getProvinceSS();
+	ostalCodeDisplayLabel->Text = "Postal Code: " + usersWarehouse->getPostalCodeSS();
+
+	//get the inventory from the warehouse
+	getWarehouseInventory();
+
+	std::cout << usersWarehouse->printDimensions();
 }
+
 };
 }

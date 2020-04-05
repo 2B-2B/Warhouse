@@ -6,7 +6,7 @@
 #include <iostream>
 
 /*
-This is a child class of "Wood"
+This is a child class of "Wood" 
 Finishing is a type of wood offered in our LumberYard
 */
 
@@ -14,7 +14,7 @@ class Finishing :public Wood
 {
 private:
 	//variable deceleration
-	double length, height;
+	double length,height;
 	std::string mouldType, material;
 
 public:
@@ -25,10 +25,10 @@ public:
 	//mutators
 	void setLength(double length) { this->length = length; }
 	void setThick(double height) { this->height = height; }
-
+	
 	//accessors
-	double getLength() const { return this->length; }
-	double getThick() const { return this->height; }
+	double getLength() const{ return this->length; }
+	double getThick() const{ return this->height; }
 
 	//additional functions
 	std::string dimentionCombination();	//this function combines all dimentions and outputs it as a string

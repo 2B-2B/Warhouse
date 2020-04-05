@@ -1,75 +1,20 @@
 ﻿  AddUser.cpp
-C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\database.h(91,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\database.h(77,9): warning C4101: 'errMsg': unreferenced local variable
-C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\database.h(144,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   AddWarehouse.cpp
   AdminConsole.cpp
+  Dimentional.cpp
   Display.cpp
+  Finishing.cpp
   Login.cpp
-C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\database.h(91,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\database.h(77,9): warning C4101: 'errMsg': unreferenced local variable
-C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\database.h(144,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   ManageUsers.cpp
   ManageWarehouses.cpp
   Order.cpp
+  Plywood.cpp
+  Rail.cpp
   Ship.cpp
   Source.cpp
-C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\database.h(91,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\database.h(77,9): warning C4101: 'errMsg': unreferenced local variable
-C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\database.h(144,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Users.cpp
+  Warehouse.cpp
+  Wood.cpp
   Generating Code...
-C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\database.h(124): warning C4715: 'login': not all control paths return a value
-C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\database.h(171): warning C4715: 'addUsertoDB': not all control paths return a value
-C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\database.h(124): warning C4715: 'login': not all control paths return a value
-C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\database.h(171): warning C4715: 'addUsertoDB': not all control paths return a value
   AddUser.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-Source.obj : warning LNK4248: unresolved typeref token (0100002C) for 'sqlite3'; image may not run
-Login.obj : warning LNK4248: unresolved typeref token (01000028) for 'sqlite3'; image may not run
-AddUser.obj : warning LNK4248: unresolved typeref token (0100002A) for 'sqlite3'; image may not run
-Source.obj : warning LNK4248: unresolved typeref token (0100002D) for 'sqlite3_stmt'; image may not run
-Login.obj : warning LNK4248: unresolved typeref token (01000029) for 'sqlite3_stmt'; image may not run
-Source.obj : error LNK2028: unresolved token (0A000467) "extern "C" char const * __cdecl sqlite3_errmsg(struct sqlite3 *)" (?sqlite3_errmsg@@$$J0YAPEBDPEAUsqlite3@@@Z) referenced in function "private: void __clrcall Warhouse::AddWarehouse::InitializeComponent(void)" (?InitializeComponent@AddWarehouse@Warhouse@@$$FAE$AAMXXZ)
-Login.obj : error LNK2028: unresolved token (0A000466) "extern "C" char const * __cdecl sqlite3_errmsg(struct sqlite3 *)" (?sqlite3_errmsg@@$$J0YAPEBDPEAUsqlite3@@@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-AddUser.obj : error LNK2028: unresolved token (0A000466) "extern "C" char const * __cdecl sqlite3_errmsg(struct sqlite3 *)" (?sqlite3_errmsg@@$$J0YAPEBDPEAUsqlite3@@@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-Source.obj : error LNK2028: unresolved token (0A0004C8) "extern "C" int __cdecl sqlite3_exec(struct sqlite3 *,char const *,int (__cdecl*)(void *,int,char * *,char * *),void *,char * *)" (?sqlite3_exec@@$$J0YAHPEAUsqlite3@@PEBDP6AHPEAXHPEAPEAD3@Z23@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-Login.obj : error LNK2028: unresolved token (0A0004C7) "extern "C" int __cdecl sqlite3_exec(struct sqlite3 *,char const *,int (__cdecl*)(void *,int,char * *,char * *),void *,char * *)" (?sqlite3_exec@@$$J0YAHPEAUsqlite3@@PEBDP6AHPEAXHPEAPEAD3@Z23@Z) referenced in function "private: void __cdecl std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >::_Eos(unsigned __int64)" (?_Eos@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@$$FAEAAX_K@Z)
-AddUser.obj : error LNK2028: unresolved token (0A0004C7) "extern "C" int __cdecl sqlite3_exec(struct sqlite3 *,char const *,int (__cdecl*)(void *,int,char * *,char * *),void *,char * *)" (?sqlite3_exec@@$$J0YAHPEAUsqlite3@@PEBDP6AHPEAXHPEAPEAD3@Z23@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-Source.obj : error LNK2028: unresolved token (0A000501) "extern "C" int __cdecl sqlite3_close(struct sqlite3 *)" (?sqlite3_close@@$$J0YAHPEAUsqlite3@@@Z) referenced in function "private: void __clrcall Warhouse::AdminConsole::InitializeComponent(void)" (?InitializeComponent@AdminConsole@Warhouse@@$$FAE$AAMXXZ)
-Login.obj : error LNK2020: unresolved token (0A000500) "extern "C" int __cdecl sqlite3_close(struct sqlite3 *)" (?sqlite3_close@@$$J0YAHPEAUsqlite3@@@Z)
-AddUser.obj : error LNK2028: unresolved token (0A000500) "extern "C" int __cdecl sqlite3_close(struct sqlite3 *)" (?sqlite3_close@@$$J0YAHPEAUsqlite3@@@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-Source.obj : error LNK2028: unresolved token (0A0005C8) "extern "C" void __cdecl sqlite3_free(void *)" (?sqlite3_free@@$$J0YAXPEAX@Z) referenced in function "private: void __clrcall Warhouse::AdminConsole::InitializeComponent(void)" (?InitializeComponent@AdminConsole@Warhouse@@$$FAE$AAMXXZ)
-Login.obj : error LNK2028: unresolved token (0A0005B9) "extern "C" void __cdecl sqlite3_free(void *)" (?sqlite3_free@@$$J0YAXPEAX@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-AddUser.obj : error LNK2028: unresolved token (0A0005C0) "extern "C" void __cdecl sqlite3_free(void *)" (?sqlite3_free@@$$J0YAXPEAX@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-Source.obj : error LNK2028: unresolved token (0A0005F8) "extern "C" int __cdecl sqlite3_open(char const *,struct sqlite3 * *)" (?sqlite3_open@@$$J0YAHPEBDPEAPEAUsqlite3@@@Z) referenced in function "private: void __clrcall Warhouse::AddWarehouse::InitializeComponent(void)" (?InitializeComponent@AddWarehouse@Warhouse@@$$FAE$AAMXXZ)
-Login.obj : error LNK2028: unresolved token (0A0005E9) "extern "C" int __cdecl sqlite3_open(char const *,struct sqlite3 * *)" (?sqlite3_open@@$$J0YAHPEBDPEAPEAUsqlite3@@@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-AddUser.obj : error LNK2028: unresolved token (0A0005F0) "extern "C" int __cdecl sqlite3_open(char const *,struct sqlite3 * *)" (?sqlite3_open@@$$J0YAHPEBDPEAPEAUsqlite3@@@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-Source.obj : error LNK2028: unresolved token (0A00047A) "extern "C" int __cdecl sqlite3_step(struct sqlite3_stmt *)" (?sqlite3_step@@$$J0YAHPEAUsqlite3_stmt@@@Z) referenced in function "bool __cdecl login(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?login@@$$FYA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z)
-Login.obj : error LNK2028: unresolved token (0A000479) "extern "C" int __cdecl sqlite3_step(struct sqlite3_stmt *)" (?sqlite3_step@@$$J0YAHPEAUsqlite3_stmt@@@Z) referenced in function "bool __cdecl login(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?login@@$$FYA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z)
-Source.obj : error LNK2028: unresolved token (0A00050C) "extern "C" int __cdecl sqlite3_prepare_v2(struct sqlite3 *,char const *,int,struct sqlite3_stmt * *,char const * *)" (?sqlite3_prepare_v2@@$$J0YAHPEAUsqlite3@@PEBDHPEAPEAUsqlite3_stmt@@PEAPEBD@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-Login.obj : error LNK2028: unresolved token (0A00050B) "extern "C" int __cdecl sqlite3_prepare_v2(struct sqlite3 *,char const *,int,struct sqlite3_stmt * *,char const * *)" (?sqlite3_prepare_v2@@$$J0YAHPEAUsqlite3@@PEBDHPEAPEAUsqlite3_stmt@@PEAPEBD@Z) referenced in function "bool __cdecl login(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?login@@$$FYA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z)
-Source.obj : error LNK2028: unresolved token (0A0005C3) "extern "C" int __cdecl sqlite3_finalize(struct sqlite3_stmt *)" (?sqlite3_finalize@@$$J0YAHPEAUsqlite3_stmt@@@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-Login.obj : error LNK2028: unresolved token (0A0005B4) "extern "C" int __cdecl sqlite3_finalize(struct sqlite3_stmt *)" (?sqlite3_finalize@@$$J0YAHPEAUsqlite3_stmt@@@Z) referenced in function "bool __cdecl login(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?login@@$$FYA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z)
-AddUser.obj : error LNK2019: unresolved external symbol "extern "C" int __cdecl sqlite3_open(char const *,struct sqlite3 * *)" (?sqlite3_open@@$$J0YAHPEBDPEAPEAUsqlite3@@@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-Login.obj : error LNK2001: unresolved external symbol "extern "C" int __cdecl sqlite3_open(char const *,struct sqlite3 * *)" (?sqlite3_open@@$$J0YAHPEBDPEAPEAUsqlite3@@@Z)
-Source.obj : error LNK2001: unresolved external symbol "extern "C" int __cdecl sqlite3_open(char const *,struct sqlite3 * *)" (?sqlite3_open@@$$J0YAHPEBDPEAPEAUsqlite3@@@Z)
-AddUser.obj : error LNK2019: unresolved external symbol "extern "C" char const * __cdecl sqlite3_errmsg(struct sqlite3 *)" (?sqlite3_errmsg@@$$J0YAPEBDPEAUsqlite3@@@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-Login.obj : error LNK2001: unresolved external symbol "extern "C" char const * __cdecl sqlite3_errmsg(struct sqlite3 *)" (?sqlite3_errmsg@@$$J0YAPEBDPEAUsqlite3@@@Z)
-Source.obj : error LNK2001: unresolved external symbol "extern "C" char const * __cdecl sqlite3_errmsg(struct sqlite3 *)" (?sqlite3_errmsg@@$$J0YAPEBDPEAUsqlite3@@@Z)
-AddUser.obj : error LNK2019: unresolved external symbol "extern "C" int __cdecl sqlite3_exec(struct sqlite3 *,char const *,int (__cdecl*)(void *,int,char * *,char * *),void *,char * *)" (?sqlite3_exec@@$$J0YAHPEAUsqlite3@@PEBDP6AHPEAXHPEAPEAD3@Z23@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-Login.obj : error LNK2001: unresolved external symbol "extern "C" int __cdecl sqlite3_exec(struct sqlite3 *,char const *,int (__cdecl*)(void *,int,char * *,char * *),void *,char * *)" (?sqlite3_exec@@$$J0YAHPEAUsqlite3@@PEBDP6AHPEAXHPEAPEAD3@Z23@Z)
-Source.obj : error LNK2001: unresolved external symbol "extern "C" int __cdecl sqlite3_exec(struct sqlite3 *,char const *,int (__cdecl*)(void *,int,char * *,char * *),void *,char * *)" (?sqlite3_exec@@$$J0YAHPEAUsqlite3@@PEBDP6AHPEAXHPEAPEAD3@Z23@Z)
-AddUser.obj : error LNK2019: unresolved external symbol "extern "C" void __cdecl sqlite3_free(void *)" (?sqlite3_free@@$$J0YAXPEAX@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-Login.obj : error LNK2001: unresolved external symbol "extern "C" void __cdecl sqlite3_free(void *)" (?sqlite3_free@@$$J0YAXPEAX@Z)
-Source.obj : error LNK2001: unresolved external symbol "extern "C" void __cdecl sqlite3_free(void *)" (?sqlite3_free@@$$J0YAXPEAX@Z)
-AddUser.obj : error LNK2019: unresolved external symbol "extern "C" int __cdecl sqlite3_close(struct sqlite3 *)" (?sqlite3_close@@$$J0YAHPEAUsqlite3@@@Z) referenced in function "void __cdecl StartDB(void)" (?StartDB@@$$FYAXXZ)
-Login.obj : error LNK2001: unresolved external symbol "extern "C" int __cdecl sqlite3_close(struct sqlite3 *)" (?sqlite3_close@@$$J0YAHPEAUsqlite3@@@Z)
-Source.obj : error LNK2001: unresolved external symbol "extern "C" int __cdecl sqlite3_close(struct sqlite3 *)" (?sqlite3_close@@$$J0YAHPEAUsqlite3@@@Z)
-Login.obj : error LNK2019: unresolved external symbol "extern "C" int __cdecl sqlite3_prepare_v2(struct sqlite3 *,char const *,int,struct sqlite3_stmt * *,char const * *)" (?sqlite3_prepare_v2@@$$J0YAHPEAUsqlite3@@PEBDHPEAPEAUsqlite3_stmt@@PEAPEBD@Z) referenced in function "bool __cdecl login(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?login@@$$FYA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z)
-Source.obj : error LNK2001: unresolved external symbol "extern "C" int __cdecl sqlite3_prepare_v2(struct sqlite3 *,char const *,int,struct sqlite3_stmt * *,char const * *)" (?sqlite3_prepare_v2@@$$J0YAHPEAUsqlite3@@PEBDHPEAPEAUsqlite3_stmt@@PEAPEBD@Z)
-Login.obj : error LNK2019: unresolved external symbol "extern "C" int __cdecl sqlite3_step(struct sqlite3_stmt *)" (?sqlite3_step@@$$J0YAHPEAUsqlite3_stmt@@@Z) referenced in function "bool __cdecl login(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?login@@$$FYA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z)
-Source.obj : error LNK2001: unresolved external symbol "extern "C" int __cdecl sqlite3_step(struct sqlite3_stmt *)" (?sqlite3_step@@$$J0YAHPEAUsqlite3_stmt@@@Z)
-Login.obj : error LNK2019: unresolved external symbol "extern "C" int __cdecl sqlite3_finalize(struct sqlite3_stmt *)" (?sqlite3_finalize@@$$J0YAHPEAUsqlite3_stmt@@@Z) referenced in function "bool __cdecl login(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?login@@$$FYA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0@Z)
-Source.obj : error LNK2001: unresolved external symbol "extern "C" int __cdecl sqlite3_finalize(struct sqlite3_stmt *)" (?sqlite3_finalize@@$$J0YAHPEAUsqlite3_stmt@@@Z)
-sqlite3.lib : warning LNK4272: library machine type 'x86' conflicts with target machine type 'x64'
-C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\x64\Debug\Warhouse.exe : fatal error LNK1120: 29 unresolved externals
+  Warhouse.vcxproj -> C:\Users\ryan_\Desktop\File Base Project\Warhouse\x64\Debug\Warhouse.exe

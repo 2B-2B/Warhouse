@@ -7,7 +7,7 @@
 //this is to convert system string to std string
 #include <msclr\marshal_cppstd.h>
 
-class Users :public Warehouse
+class Users:public Warehouse
 {
 
 private:
@@ -16,7 +16,7 @@ private:
 	std::string username;
 	std::string password;
 	std::string clearence;
-
+	
 
 public:
 
@@ -24,13 +24,13 @@ public:
 	std::string getUsername() const { return username; }
 	std::string getPassword() const { return password; }
 	std::string getClearence() const { return clearence; }
-
+	
 
 	//setter functions
 	void setUsername(std::string username) { this->username = username; }
 	void setPassword(std::string password) { this->password = password; }
 	void setClearence(std::string clearence) { this->clearence = clearence; }
-
+	
 
 	//get the system string
 	System::String^ getUsernameSS();
@@ -38,7 +38,7 @@ public:
 	System::String^ getClearenceSS();
 
 	//default constructer
-	Users() { username = password = clearence = "n/d"; }
+	Users() { username = password = clearence = "n/d";}
 
 	//non-deault constructer
 	Users(std::string username, std::string password, std::string clearence);

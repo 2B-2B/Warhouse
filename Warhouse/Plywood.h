@@ -31,12 +31,12 @@ public:
 	void setLength(double length) { this->length = length; }
 	void setWidth(double width) { this->width = width; }
 	void setThick(double thick) { this->thick = thick; }
-
+	
 	//accessors
-	double getLength() const { return this->length; }
-	double getWideth() const { return this->width; }
-	double getThick() const { return this->thick; }
-
+	double getLength() const{ return this->length; }
+	double getWideth() const{ return this->width; }
+	double getThick() const{ return this->thick; }
+	
 
 	//additional functions
 	std::string dimentionCombination();	//this function combines all dimentions and outputs it as a string

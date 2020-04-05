@@ -1,8 +1,10 @@
 #pragma once
 
 #include <iostream>
-#include "database.h"
-#include <msclr\marshal_cppstd.h>
+#include <fstream>
+
+#include <string>
+
 
 namespace Warhouse {
 
@@ -31,7 +33,7 @@ namespace Warhouse {
 	private: System::Windows::Forms::TextBox^ usernameTextBox;
 	private: System::Windows::Forms::Label^ passwordLabel;
 	private: System::Windows::Forms::Label^ usernameLabel;
-    bool* thisXPushed = nullptr;
+		   bool* thisXPushed = nullptr;
 	public:
 		AddUser(void)
 		{
@@ -44,7 +46,6 @@ namespace Warhouse {
 		{
 			InitializeComponent();
 			//
-			StartDB();
 			//TODO: Add the constructor code here
 			//
 			thisGui = gui;
@@ -63,11 +64,26 @@ namespace Warhouse {
 			}
 		}
 
+
+
+
+
+
+
+
+
+	protected:
+
+
+
+
+	protected:
+
 	private:
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -95,7 +111,7 @@ namespace Warhouse {
 			this->warehouseLabel->Location = System::Drawing::Point(26, 102);
 			this->warehouseLabel->Name = L"warehouseLabel";
 			this->warehouseLabel->Size = System::Drawing::Size(91, 20);
-			this->warehouseLabel->TabIndex = 21;
+			this->warehouseLabel->TabIndex = 32;
 			this->warehouseLabel->Text = L"Warehouse";
 			// 
 			// warehouseComboBox
@@ -104,14 +120,14 @@ namespace Warhouse {
 			this->warehouseComboBox->Location = System::Drawing::Point(130, 94);
 			this->warehouseComboBox->Name = L"warehouseComboBox";
 			this->warehouseComboBox->Size = System::Drawing::Size(136, 28);
-			this->warehouseComboBox->TabIndex = 20;
+			this->warehouseComboBox->TabIndex = 31;
 			// 
 			// addButton
 			// 
 			this->addButton->Location = System::Drawing::Point(150, 200);
 			this->addButton->Name = L"addButton";
 			this->addButton->Size = System::Drawing::Size(116, 40);
-			this->addButton->TabIndex = 19;
+			this->addButton->TabIndex = 30;
 			this->addButton->Text = L"Add";
 			this->addButton->UseVisualStyleBackColor = true;
 			// 
@@ -120,7 +136,7 @@ namespace Warhouse {
 			this->backButton->Location = System::Drawing::Point(12, 200);
 			this->backButton->Name = L"backButton";
 			this->backButton->Size = System::Drawing::Size(116, 40);
-			this->backButton->TabIndex = 18;
+			this->backButton->TabIndex = 29;
 			this->backButton->Text = L"Back";
 			this->backButton->UseVisualStyleBackColor = true;
 			// 
@@ -130,7 +146,7 @@ namespace Warhouse {
 			this->adminAccessRadioButton->Location = System::Drawing::Point(134, 170);
 			this->adminAccessRadioButton->Name = L"adminAccessRadioButton";
 			this->adminAccessRadioButton->Size = System::Drawing::Size(79, 24);
-			this->adminAccessRadioButton->TabIndex = 17;
+			this->adminAccessRadioButton->TabIndex = 28;
 			this->adminAccessRadioButton->Text = L"Admin";
 			this->adminAccessRadioButton->UseVisualStyleBackColor = true;
 			// 
@@ -141,7 +157,7 @@ namespace Warhouse {
 			this->generalAccessRasioButton->Location = System::Drawing::Point(134, 140);
 			this->generalAccessRasioButton->Name = L"generalAccessRasioButton";
 			this->generalAccessRasioButton->Size = System::Drawing::Size(91, 24);
-			this->generalAccessRasioButton->TabIndex = 16;
+			this->generalAccessRasioButton->TabIndex = 27;
 			this->generalAccessRasioButton->TabStop = true;
 			this->generalAccessRasioButton->Text = L"General";
 			this->generalAccessRasioButton->UseVisualStyleBackColor = true;
@@ -152,7 +168,7 @@ namespace Warhouse {
 			this->accessLevelLabel->Location = System::Drawing::Point(26, 153);
 			this->accessLevelLabel->Name = L"accessLevelLabel";
 			this->accessLevelLabel->Size = System::Drawing::Size(102, 20);
-			this->accessLevelLabel->TabIndex = 15;
+			this->accessLevelLabel->TabIndex = 26;
 			this->accessLevelLabel->Text = L"Access Level";
 			// 
 			// passwordTextBox
@@ -161,14 +177,14 @@ namespace Warhouse {
 			this->passwordTextBox->Name = L"passwordTextBox";
 			this->passwordTextBox->PasswordChar = '*';
 			this->passwordTextBox->Size = System::Drawing::Size(136, 26);
-			this->passwordTextBox->TabIndex = 14;
+			this->passwordTextBox->TabIndex = 25;
 			// 
 			// usernameTextBox
 			// 
 			this->usernameTextBox->Location = System::Drawing::Point(130, 21);
 			this->usernameTextBox->Name = L"usernameTextBox";
 			this->usernameTextBox->Size = System::Drawing::Size(136, 26);
-			this->usernameTextBox->TabIndex = 13;
+			this->usernameTextBox->TabIndex = 24;
 			// 
 			// passwordLabel
 			// 
@@ -176,7 +192,7 @@ namespace Warhouse {
 			this->passwordLabel->Location = System::Drawing::Point(26, 53);
 			this->passwordLabel->Name = L"passwordLabel";
 			this->passwordLabel->Size = System::Drawing::Size(78, 20);
-			this->passwordLabel->TabIndex = 12;
+			this->passwordLabel->TabIndex = 23;
 			this->passwordLabel->Text = L"Password";
 			// 
 			// usernameLabel
@@ -185,7 +201,7 @@ namespace Warhouse {
 			this->usernameLabel->Location = System::Drawing::Point(26, 21);
 			this->usernameLabel->Name = L"usernameLabel";
 			this->usernameLabel->Size = System::Drawing::Size(83, 20);
-			this->usernameLabel->TabIndex = 11;
+			this->usernameLabel->TabIndex = 22;
 			this->usernameLabel->Text = L"Username";
 			// 
 			// AddUser
@@ -213,44 +229,32 @@ namespace Warhouse {
 		}
 #pragma endregion
 		//Closes the gui and goes to the previus gui 
-private: System::Void backButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	*thisXPushed = false; //Tells the driver program that the gui was not closed
-	*thisGui = 6; //Sets gui to open ManageUsers
-	this->Close(); //Closes this gui
-}
-	    //Adds the user to the database, closes the gui and goes to the previus gui 
-private: System::Void addButton_Click(System::Object^ sender, System::EventArgs^ e) {
-
-	msclr::interop::marshal_context context;
-	
-	std::string username = context.marshal_as<std::string>(usernameTextBox->Text);
-	std::string password = context.marshal_as<std::string>(passwordTextBox->Text);
-	std::string clearance;
-	if (generalAccessRasioButton->Checked) {
-		clearance = "user";
-	}
-	else {
-		clearance = "admin";
-	}
-
-	// ADD LATER WHEN FEILDS ARE ADDED TO GUI
-	//std::string address = context.marshal_as<std::string>(->value);
-	//std::string province = context.marshal_as<std::string>(passwordTextBox->Text);
-	//std::string postal = context.marshal_as<std::string>(->Text);
-	//
-
-	if (addUsertoDB(username, password, clearance, "N/A", "N/A", "N/A")) {
-		//
+	private: System::Void backButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		*thisXPushed = false; //Tells the driver program that the gui was not closed
 		*thisGui = 6; //Sets gui to open ManageUsers
 		this->Close(); //Closes this gui
 	}
-}
-	    //Initalizing the gui with the values from the data base
-private: System::Void AddUser_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
-	//
-	//TODO: Add initalization code
-	//
-}
-};
+		   //Adds the user to the database, closes the gui and goes to the previus gui 
+	private: System::Void addButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+		//add the refernece to the file
+
+
+
+
+
+
+		*thisXPushed = false; //Tells the driver program that the gui was not closed
+		*thisGui = 6; //Sets gui to open ManageUsers
+		this->Close(); //Closes this gui
+	}
+		   //Initalizing the gui with the values from the data base
+	private: System::Void AddUser_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
+		
+		
+		//initalized the text file.
+
+		
+	}
+	};
 }

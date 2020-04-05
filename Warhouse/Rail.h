@@ -7,7 +7,7 @@
 #include <msclr/marshal_cppstd.h>
 /*
 This is a child class of "Wood".
-Railings are one of the types of wood avaiable in our lumberyard.
+Railings are one of the types of wood avaiable in our lumberyard. 
 */
 
 class Rail :public Wood
@@ -15,7 +15,7 @@ class Rail :public Wood
 
 private:
 	//variable deceleration
-	double length, height;
+	double length, height;	
 	std::string type, material;
 
 public:
@@ -26,7 +26,7 @@ public:
 	//mutators
 	void setLength(double length) { this->length = length; }
 	void setThick(double height) { this->height = height; }
-
+	
 	//Accessor
 	double getLength() const { return this->length; }
 	double getThick() const { return this->height; }
@@ -38,4 +38,3 @@ public:
 };
 
 #endif
-

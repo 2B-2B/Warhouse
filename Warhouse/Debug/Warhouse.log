@@ -1,15 +1,5 @@
-﻿  Dimentional.cpp
-  Finishing.cpp
-  Plywood.cpp
-  Rail.cpp
-  Users.cpp
-  Warehouse.cpp
-  Wood.cpp
+﻿  AdminConsole.cpp
+  Source.cpp
   Generating Code...
   AddUser.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-Source.obj : warning LNK4248: unresolved typeref token (0100002B) for 'sqlite3'; image may not run
-Login.obj : warning LNK4248: unresolved typeref token (01000027) for 'sqlite3'; image may not run
-AddUser.obj : warning LNK4248: unresolved typeref token (01000029) for 'sqlite3'; image may not run
-Source.obj : warning LNK4248: unresolved typeref token (0100002D) for 'sqlite3_stmt'; image may not run
-Login.obj : warning LNK4248: unresolved typeref token (01000029) for 'sqlite3_stmt'; image may not run
-  Warhouse.vcxproj -> C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Debug\Warhouse.exe
+  Warhouse.vcxproj -> C:\Users\aavin\source\repos\Warhouse\Debug\Warhouse.exe

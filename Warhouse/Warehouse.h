@@ -13,7 +13,7 @@
 #include <msclr\marshal_cppstd.h>
 
 
-class Warehouse : public Dimentional, Plywood, Rail, Finishing
+class Warehouse: public Dimentional, Plywood, Rail, Finishing
 {
 
 protected:
@@ -27,7 +27,7 @@ protected:
 	Finishing* finishingWood;
 
 public:
-
+	
 	//getter functions
 	std::string getPostalCode() { return postalCode; }
 	std::string getProvince() { return province; }
@@ -38,7 +38,7 @@ public:
 	void setProvince(std::string province) { this->province = province; }
 	void setAddress(std::string address) { this->address = address; }
 
-
+	
 
 
 
@@ -47,7 +47,7 @@ public:
 	System::String^ getPostalCodeSS();
 	System::String^ getProvinceSS();
 	System::String^ getAddressSS();
-
+	
 	//this is to print the full address as a string
 	std::string print();
 	//this is to print the full address as a system string
@@ -79,7 +79,7 @@ public:
 
 
 
-
+	
 	void setDimentionalWood(Dimentional& dimentionalWood);
 
 };

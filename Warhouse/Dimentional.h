@@ -10,12 +10,12 @@ This is a child class of "Wood"
 Dimentional Lumber is a type of wood that is included in the lumberyard
 */
 
-class Dimentional :public Wood
+class Dimentional:public Wood
 {
 private:
 	//variable decelartion
 	double length, width, height;
-
+	
 	//not needed
 	//std::string volume;
 
@@ -24,7 +24,7 @@ public:
 	Dimentional();	//default contructor
 	Dimentional(double, double, double, double, int); //contructor (length, width, height, price, available)
 	Dimentional(double, double, double, double, int, int); //contructor (length, width, height, price, amount, available)
-
+	
 	Dimentional(std::string, std::string, std::string, std::string, std::string); //contructor (length, width, height, price, available)
 
 	//copy construter
@@ -35,14 +35,14 @@ public:
 	void setLength(double l) { length = l; }
 	void setWidth(double w) { width = 2; }
 	void setHeight(double h) { height = h; }
-
+	
 	//accessors
 	double getLength() const { return length; }
 	double getWideth() const { return width; }
 	double getHeight() const { return height; }
+	
 
-
-
+	
 	//print the dimensions as a standrad string
 	std::string printDimensions();	//this function combines all dimentions and outputs as a string
 
@@ -58,6 +58,4 @@ public:
 };
 
 #endif
-
-
 

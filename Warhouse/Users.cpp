@@ -35,7 +35,7 @@ Users::Users(std::string username, std::string password, std::string clearence) 
 	this->username = username;
 	this->password = password;
 	this->clearence = clearence;
-
+	
 }
 
 //overloaded constructer
@@ -46,7 +46,7 @@ Users::Users(System::String^ username, System::String^ password, System::String^
 	this->username = msclr::interop::marshal_as<std::string>(username);
 	this->password = msclr::interop::marshal_as<std::string>(password);
 	this->clearence = msclr::interop::marshal_as<std::string>(clearence);
-
+	
 }
 
 
@@ -71,7 +71,7 @@ Users::Users(std::string username, std::string password, std::string clearence, 
 
 
 //non-deault constructer
-Users::Users(System::String^ username, System::String^ password, System::String^ clearence, System::String^ address, System::String^ province, System::String^ postalCode) :Warehouse(address, province, postalCode) {
+Users::Users(System::String^ username, System::String^ password, System::String^ clearence, System::String^ address, System::String^ province, System::String^ postalCode):Warehouse(address,province,postalCode) {
 
 	//will convert from system string to std string
 	this->username = msclr::interop::marshal_as<std::string>(username);

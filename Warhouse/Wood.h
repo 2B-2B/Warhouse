@@ -4,7 +4,7 @@
 #include <msclr/marshal_cppstd.h>
 
 /*
-This is the parent class for all wood types and finishes.
+This is the parent class for all wood types and finishes. 
 The Wood class uses general variables shared among all wood types including price and amount.
 */
 
@@ -28,12 +28,12 @@ public:
 	void setAvaiable(int available) { this->available = available; }
 
 	//accessors
-	double getPrice() const { return this->price; }
-	int getAmount() const { return this->amount; }
+	double getPrice() const{ return this->price; } 
+	int getAmount() const{ return this->amount; }
 
 	//additional functions
 	double totalPrice() { return price * amount; }		//this function calculates the total price for the amount needed.
-
+	
 	//system string getters
 	System::String^ getDimentionSS();
 	System::String^ getPriceSS();

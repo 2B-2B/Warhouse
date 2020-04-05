@@ -19,7 +19,7 @@ Finishing::Finishing(double length, double height, std::string material, std::st
 
 //combination string function
 std::string Finishing::dimentionCombination() {
-	return std::to_string(length) + "X" + std::to_string(height) + mouldType + " " + material;
+	return std::to_string(length) + "X"+ std::to_string(height) + mouldType + " " + material;
 }
 
 

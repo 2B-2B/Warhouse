@@ -9,21 +9,21 @@ std::string Warehouse::print() {
 
 //return the string as a system string
 System::String^ Warehouse::getPostalCodeSS() {
-
+	
 	System::String^ ss = gcnew System::String(postalCode.c_str());
 	return ss;
 }
 
 //return the string as a system string
 System::String^ Warehouse::getProvinceSS() {
-
+	
 	System::String^ ss = gcnew System::String(province.c_str());
 	return ss;
 }
 
 //return the string as a system string
 System::String^ Warehouse::getAddressSS() {
-
+	
 	System::String^ ss = gcnew System::String(address.c_str());
 	return ss;
 }
