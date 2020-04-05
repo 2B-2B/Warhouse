@@ -1,0 +1,11 @@
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\x64\Debug\Warhouse.vcxprojAssemblyReference.cache
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\x64\Debug\Warhouse.AddUser.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\x64\Debug\Warhouse.AddWarehouse.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\x64\Debug\Warhouse.AdminConsole.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\x64\Debug\Warhouse.Display.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\x64\Debug\Warhouse.Login.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\x64\Debug\Warhouse.ManageUsers.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\x64\Debug\Warhouse.ManageWarehouses.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\x64\Debug\Warhouse.Order.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\x64\Debug\Warhouse.Ship.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\x64\Debug\Warhouse.vcxproj.GenerateResource.cache

@@ -1,5 +1,7 @@
 #pragma once
 #include <iostream>
+#include "database.h"
+#include <msclr\marshal_cppstd.h>
 
 namespace Warhouse {
 
@@ -30,6 +32,7 @@ namespace Warhouse {
 		{
 			InitializeComponent();
 			//
+			StartDB();
 			//TODO: Add the constructor code here
 			//
 			thisGui = gui;
@@ -134,17 +137,27 @@ namespace Warhouse {
 #pragma endregion
 		//Closes this gui and opens either Display or AdminConsole
 	private: System::Void loginButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (true)
-		{
-			*thisXPushed = false; //Tells the driver program that the gui was not closed
-			*thisGui = 3; //Sets gui to open AdminConsole
-			this->Close(); //Closes this gui
-		}
-		else
-		{
-			*thisXPushed = false; //Tells the driver program that the gui was not closed
-			*thisGui = 4; //Sets gui to open Display
-			this->Close(); //Closes this gui
+
+		msclr::interop::marshal_context context;
+
+
+		std::string username = context.marshal_as<std::string>(usernameTextBox->Text);
+		std::string password = context.marshal_as<std::string>(passwordTextBox->Text);
+
+		if (login(username, password)) {
+
+			if (true)
+			{
+				*thisXPushed = false; //Tells the driver program that the gui was not closed
+				*thisGui = 3; //Sets gui to open AdminConsole
+				this->Close(); //Closes this gui
+			}
+			else
+			{
+				*thisXPushed = false; //Tells the driver program that the gui was not closed
+				*thisGui = 4; //Sets gui to open Display
+				this->Close(); //Closes this gui
+			}
 		}
 	}
 };

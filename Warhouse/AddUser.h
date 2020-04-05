@@ -1,5 +1,9 @@
 #pragma once
 
+#include <iostream>
+#include "database.h"
+#include <msclr\marshal_cppstd.h>
+
 namespace Warhouse {
 
 	using namespace System;
@@ -29,6 +33,7 @@ namespace Warhouse {
 		{
 			InitializeComponent();
 			//
+			StartDB();
 			//TODO: Add the constructor code here
 			//
 			thisGui = gui;
@@ -200,12 +205,31 @@ private: System::Void backButton_Click(System::Object^ sender, System::EventArgs
 }
 	    //Adds the user to the database, closes the gui and goes to the previus gui 
 private: System::Void addButton_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	msclr::interop::marshal_context context;
+	
+	std::string username = context.marshal_as<std::string>(usernameTextBox->Text);
+	std::string password = context.marshal_as<std::string>(passwordTextBox->Text);
+	std::string clearance;
+	if (generalAccessRasioButton->Checked) {
+		clearance = "user";
+	}
+	else {
+		clearance = "admin";
+	}
+
+	// ADD LATER WHEN FEILDS ARE ADDED TO GUI
+	//std::string address = context.marshal_as<std::string>(->value);
+	//std::string province = context.marshal_as<std::string>(passwordTextBox->Text);
+	//std::string postal = context.marshal_as<std::string>(->Text);
 	//
-	//TODO: Add save warehouse code
-	//
-	*thisXPushed = false; //Tells the driver program that the gui was not closed
-	*thisGui = 6; //Sets gui to open ManageUsers
-	this->Close(); //Closes this gui
+
+	if (addUsertoDB(username, password, clearance, "N/A", "N/A", "N/A")) {
+		//
+		*thisXPushed = false; //Tells the driver program that the gui was not closed
+		*thisGui = 6; //Sets gui to open ManageUsers
+		this->Close(); //Closes this gui
+	}
 }
 	    //Initalizing the gui with the values from the data base
 private: System::Void AddUser_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
