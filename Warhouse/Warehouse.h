@@ -61,7 +61,7 @@ public:
 
 
 	//default constructers
-	Warehouse() { postalCode = province = address = "n/a"; }
+	Warehouse() { postalCode = city = province = address = "n/a"; }
 
 	//non-default constructer - standard string
 	//address, province, postalCode

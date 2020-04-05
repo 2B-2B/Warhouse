@@ -284,10 +284,10 @@ private: System::Void Display_VisibleChanged(System::Object^ sender, System::Eve
 	usersWarehouse = new Warehouse(currentUser->getAddress(), currentUser->getCity(), currentUser->getProvince(), currentUser->getPostalCode());
 
 	//display the info of the warehouse on the screen
-//	addresDisplayLabel->Text = "Address: " + usersWarehouse->getAddressSS();
-//	ityDisplayLabel->Text = "City: " + usersWarehouse->getCitySS();
-//	provinceDisplayLAbel->Text = "Province: " + usersWarehouse->getProvinceSS();
-//	ostalCodeDisplayLabel->Text = "Postal Code: " + usersWarehouse->getPostalCodeSS();
+	addresDisplayLabel->Text = "Address: " + usersWarehouse->getAddressSS();
+	ityDisplayLabel->Text = "City: " + usersWarehouse->getCitySS();
+	provinceDisplayLAbel->Text = "Province: " + usersWarehouse->getProvinceSS();
+	ostalCodeDisplayLabel->Text = "Postal Code: " + usersWarehouse->getPostalCodeSS();
 
 	//get the inventory from the warehouse
 	//getWarehouseInventory();
