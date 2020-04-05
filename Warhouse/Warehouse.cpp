@@ -117,3 +117,24 @@ void Warehouse::setDimentionalWood(Dimentional& dimentionalWood) {
 	this->dimentionalWood = &dimentionalWood;
 
 }
+
+//set the dimentionalwoof of the warehouse;
+void Warehouse::setPlywoodWood(Plywood& plywoodWood) {
+
+	this->plywoodWood = &plywoodWood;
+
+}
+
+//set the dimentionalwoof of the warehouse;
+void Warehouse::setRailWood(Rail& railWood) {
+
+	this->railWood = &railWood;
+
+}
+
+//set the dimentionalwoof of the warehouse;
+void Warehouse::setFinishingWood(Finishing& finishingWood) {
+
+	this->finishingWood = &finishingWood;
+
+}

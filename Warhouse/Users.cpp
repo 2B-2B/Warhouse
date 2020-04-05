@@ -51,7 +51,7 @@ Users::Users(System::String^ username, System::String^ password, System::String^
 
 
 //non-deault constructer
-Users::Users(std::string username, std::string password, std::string clearence, std::string address, std::string province, std::string postalCode) :Warehouse(address, province, postalCode) {
+Users::Users(std::string username, std::string password, std::string clearence, std::string address, std::string city, std::string province, std::string postalCode) :Warehouse(address, city, province, postalCode) {
 
 	//std::cout << "~~~~~~~~~~~~~~\n" << address << '\t' << province << '\t' << postalCode << std::endl;
 //	this->address = address;
@@ -71,7 +71,7 @@ Users::Users(std::string username, std::string password, std::string clearence, 
 
 
 //non-deault constructer
-Users::Users(System::String^ username, System::String^ password, System::String^ clearence, System::String^ address, System::String^ province, System::String^ postalCode):Warehouse(address,province,postalCode) {
+Users::Users(System::String^ username, System::String^ password, System::String^ clearence, System::String^ address, System::String^ city, System::String^ province, System::String^ postalCode):Warehouse(address, city, province, postalCode) {
 
 	//will convert from system string to std string
 	this->username = msclr::interop::marshal_as<std::string>(username);

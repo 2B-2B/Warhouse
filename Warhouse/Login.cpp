@@ -77,9 +77,10 @@ void Warhouse::Login::getUserInfo() {
 		std::getline(userData, *postalCode);
 
 		//construct the user.
-		*(userInfo + i) = Users(*userName, *password, *clearence, *address, *province, *postalCode);
+		*(userInfo + i) = Users(*userName, *password, *clearence, *address, *city, *province, *postalCode);
 		//cant use the constructer to change the values of warehouse
 		(userInfo + i)->setAddress(*address);
+		(userInfo + i)->setCity(*city);
 		(userInfo + i)->setProvince(*province);
 		(userInfo + i)->setPostalCode(*postalCode);
 

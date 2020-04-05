@@ -15,6 +15,7 @@ int display(array <String^>^ args) {
 }
 
 
+/*
 //to initialize the user object
 void Warhouse::Display::getWarehouseInventory() {
 	//code to place the data base info into an array object of users type
@@ -203,8 +204,9 @@ void Warhouse::Display::getWarehouseInventory() {
 	//std::cout << userInfo[0].getAddress() << std::endl;
 
 }
+*/
 
-
+/*
 //this will read from a text file, will not be needed if we make a data base.
 void Warhouse::Display::getNumberOfItems(std::ifstream* warehouseData) {
 
@@ -293,6 +295,7 @@ void Warhouse::Display::getNumberOfItems(std::ifstream* warehouseData) {
 
 }
 
+*/
 
 
 

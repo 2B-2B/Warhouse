@@ -47,10 +47,10 @@ public:
 	Users(System::String^ username, System::String^ password, System::String^ clearence);
 
 	//non-deault constructer
-	Users(std::string username, std::string password, std::string clearence, std::string address, std::string province, std::string postalCode);
+	Users(std::string username, std::string password, std::string clearence, std::string address, std::string city, std::string province, std::string postalCode);
 
 	//non-deault constructer
-	Users(System::String^ username, System::String^ password, System::String^ clearence, System::String^ address, System::String^ province, System::String^ postalCode);
+	Users(System::String^ username, System::String^ password, System::String^ clearence, System::String^ address, System::String^ city, System::String^ province, System::String^ postalCode);
 
 
 

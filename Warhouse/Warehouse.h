@@ -90,9 +90,9 @@ public:
 	//Plywood* plywoodWood;
 	//Rail* railWood;
 	//Finishing* finishingWood;
-	//void setPlywoodWood();
-	//void setPlywoodWood();
-	//void setPlywoodWood();
+	void setPlywoodWood(Plywood& plywoodWood);
+	void setRailWood(Rail& railWood);
+	void setFinishingWood(Finishing& finishingWood);
 
 
 };

@@ -38,9 +38,6 @@ Class Warhouse.Display: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(Int32*, Boolean*, Boolean*, Users*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-  Methods:
-    getWarehouseInventory(): PrivateScope, Public, HideBySig
-    getNumberOfItems(basic_ifstream<char\,std::char_traits<char> >*): PrivateScope, Public, HideBySig
 Class Warhouse.Login: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(Int32*, Boolean*, Users*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
