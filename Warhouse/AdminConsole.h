@@ -1,4 +1,7 @@
 #pragma once
+#include <fstream>
+#include <msclr\marshal_cppstd.h>
+#include <iostream>
 
 namespace Warhouse {
 
@@ -80,16 +83,16 @@ namespace Warhouse {
 			this->warehousDisplayListBox->ItemHeight = 20;
 			this->warehousDisplayListBox->Location = System::Drawing::Point(12, 12);
 			this->warehousDisplayListBox->Name = L"warehousDisplayListBox";
-			this->warehousDisplayListBox->Size = System::Drawing::Size(224, 384);
+			this->warehousDisplayListBox->Size = System::Drawing::Size(459, 384);
 			this->warehousDisplayListBox->TabIndex = 0;
 			// 
 			// usersDisplayListBox
 			// 
 			this->usersDisplayListBox->FormattingEnabled = true;
 			this->usersDisplayListBox->ItemHeight = 20;
-			this->usersDisplayListBox->Location = System::Drawing::Point(259, 12);
+			this->usersDisplayListBox->Location = System::Drawing::Point(496, 12);
 			this->usersDisplayListBox->Name = L"usersDisplayListBox";
-			this->usersDisplayListBox->Size = System::Drawing::Size(224, 384);
+			this->usersDisplayListBox->Size = System::Drawing::Size(489, 384);
 			this->usersDisplayListBox->TabIndex = 1;
 			// 
 			// viewWarehousesButton
@@ -104,7 +107,7 @@ namespace Warhouse {
 			// 
 			// manageWarehousesButton
 			// 
-			this->manageWarehousesButton->Location = System::Drawing::Point(131, 419);
+			this->manageWarehousesButton->Location = System::Drawing::Point(366, 419);
 			this->manageWarehousesButton->Name = L"manageWarehousesButton";
 			this->manageWarehousesButton->Size = System::Drawing::Size(105, 60);
 			this->manageWarehousesButton->TabIndex = 3;
@@ -114,7 +117,7 @@ namespace Warhouse {
 			// 
 			// manageUsersButton
 			// 
-			this->manageUsersButton->Location = System::Drawing::Point(259, 419);
+			this->manageUsersButton->Location = System::Drawing::Point(761, 419);
 			this->manageUsersButton->Name = L"manageUsersButton";
 			this->manageUsersButton->Size = System::Drawing::Size(224, 60);
 			this->manageUsersButton->TabIndex = 4;
@@ -126,7 +129,7 @@ namespace Warhouse {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(493, 496);
+			this->ClientSize = System::Drawing::Size(991, 496);
 			this->Controls->Add(this->manageUsersButton);
 			this->Controls->Add(this->manageWarehousesButton);
 			this->Controls->Add(this->viewWarehousesButton);
@@ -159,9 +162,49 @@ private: System::Void manageUsersButton_Click(System::Object^ sender, System::Ev
 }
 	    //Initalizing the gui with the values from the data base
 private: System::Void AdminConsole_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
-	//
-	//TODO: Add initalization code
-	//
+	//Adding list of users to usersDisplayListBox from the text file
+	std::ifstream usersList;
+	//Opening the users text file
+	usersList.open("userList.txt");
+	//Loops through the file adding all the usernames and password to the display
+	while (!usersList.eof())
+	{
+		std::string line;
+		std::string display;
+		std::getline(usersList, line, ',');
+		display = "Username: " + line;
+		std::getline(usersList, line, ',');
+		display = display + " Password: " + line;
+		std::getline(usersList, line, ',');
+		display = display + " Access: " + line;
+		std::getline(usersList, line, ',');
+		std::getline(usersList, line, ',');
+		std::getline(usersList, line, ',');
+		std::getline(usersList, line);
+		String^ str2 = gcnew String(display.c_str());
+		this->usersDisplayListBox->Items->Add(str2);
+	}
+	usersList.close();
+
+	//Adding list of warehouses to warehousDisplayListBox from the text file
+	std::ifstream warehouseList;
+	//Opening the warhouses text file
+	warehouseList.open("WarehouseInventory.txt");
+	//Loops through the file adding all the adresses and postal codes to the display
+	while (!warehouseList.eof())
+	{
+		std::string line;
+		std::string display;
+		std::getline(warehouseList, line, ',');
+		display = "Adress: " + line;
+		std::getline(warehouseList, line, ',');
+		std::getline(warehouseList, line, ',');
+		std::getline(warehouseList, line);
+		display = display + " Postal Code: " + line;
+		String^ str2 = gcnew String(display.c_str());
+		this->warehousDisplayListBox->Items->Add(str2);
+	}
+	warehouseList.close();
 }
 
 };

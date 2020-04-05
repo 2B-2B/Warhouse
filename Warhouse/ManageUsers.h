@@ -1,4 +1,7 @@
 #pragma once
+#include <fstream>
+#include <msclr\marshal_cppstd.h>
+#include <iostream>
 
 namespace Warhouse {
 
@@ -76,12 +79,12 @@ namespace Warhouse {
 			this->usersDisplayListBox->ItemHeight = 20;
 			this->usersDisplayListBox->Location = System::Drawing::Point(12, 12);
 			this->usersDisplayListBox->Name = L"usersDisplayListBox";
-			this->usersDisplayListBox->Size = System::Drawing::Size(306, 584);
+			this->usersDisplayListBox->Size = System::Drawing::Size(446, 584);
 			this->usersDisplayListBox->TabIndex = 0;
 			// 
 			// addNewUserButton
 			// 
-			this->addNewUserButton->Location = System::Drawing::Point(339, 12);
+			this->addNewUserButton->Location = System::Drawing::Point(464, 12);
 			this->addNewUserButton->Name = L"addNewUserButton";
 			this->addNewUserButton->Size = System::Drawing::Size(181, 65);
 			this->addNewUserButton->TabIndex = 1;
@@ -91,7 +94,7 @@ namespace Warhouse {
 			// 
 			// backButton
 			// 
-			this->backButton->Location = System::Drawing::Point(339, 525);
+			this->backButton->Location = System::Drawing::Point(464, 525);
 			this->backButton->Name = L"backButton";
 			this->backButton->Size = System::Drawing::Size(181, 76);
 			this->backButton->TabIndex = 3;
@@ -103,7 +106,7 @@ namespace Warhouse {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(532, 613);
+			this->ClientSize = System::Drawing::Size(657, 613);
 			this->Controls->Add(this->backButton);
 			this->Controls->Add(this->addNewUserButton);
 			this->Controls->Add(this->usersDisplayListBox);
@@ -129,9 +132,29 @@ namespace Warhouse {
 
         //Initalizing the gui with the values from the data base
 	private: System::Void ManageUsers_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
-		//
-		//TODO: Add initalization code
-		//
+		//Adding list of users to usersDisplayListBox from the text file
+		std::ifstream usersList;
+		//Opening the users text file
+		usersList.open("userList.txt");
+		//Loops through the file adding all the usernames and password to the display
+		while (!usersList.eof())
+		{
+			std::string line;
+			std::string display;
+			std::getline(usersList, line, ',');
+			display = "Username: " + line;
+			std::getline(usersList, line, ',');
+			display = display + " Password: " + line;
+			std::getline(usersList, line, ',');
+			display = display + " Access: " + line;
+			std::getline(usersList, line, ',');
+			std::getline(usersList, line, ',');
+			std::getline(usersList, line, ',');
+			std::getline(usersList, line);
+			String^ str2 = gcnew String(display.c_str());
+			this->usersDisplayListBox->Items->Add(str2);
+		}
+		usersList.close();
 }
 };
 }

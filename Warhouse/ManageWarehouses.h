@@ -1,4 +1,7 @@
 #pragma once
+#include <fstream>
+#include <msclr\marshal_cppstd.h>
+#include <iostream>
 
 namespace Warhouse {
 
@@ -130,9 +133,25 @@ private: System::Void backButton_Click(System::Object^ sender, System::EventArgs
 }
     //Initalizing the gui with the values from the data base
 private: System::Void ManageWarehouses_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
-	//
-	//TODO: Add initalization code
-	//
+	//Adding list of warehouses to warehouseDisplayListBox from the text file
+	std::ifstream warehouseList;
+	//Opening the warhouses text file
+	warehouseList.open("WarehouseInventory.txt");
+	//Loops through the file adding all the adresses and postal codes to the display
+	while (!warehouseList.eof())
+	{
+		std::string line;
+		std::string display;
+		std::getline(warehouseList, line, ',');
+		display = "Adress: " + line;
+		std::getline(warehouseList, line, ',');
+		std::getline(warehouseList, line, ',');
+		std::getline(warehouseList, line);
+		display = display + " Postal Code: " + line;
+		String^ str2 = gcnew String(display.c_str());
+		this->warehouseDisplayListBox->Items->Add(str2);
+	}
+	warehouseList.close();
 }
 };
 }
