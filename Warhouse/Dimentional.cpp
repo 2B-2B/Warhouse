@@ -16,8 +16,6 @@ Dimentional::Dimentional(double length, double width, double height, double pric
 	this->height = height;
 }
 
-
-
 //non-default construter
 Dimentional::Dimentional(double length, double width, double height, double price, int amount, int available) : Wood(price, amount, available) {
 	this->length = length;
@@ -43,9 +41,7 @@ Dimentional::Dimentional(Dimentional& dimentionalWood) {
 	amount = dimentionalWood.amount;
 	available = dimentionalWood.available;
 
-
 }
-
 
 //prints the dimensions as a standard string
 std::string Dimentional::printDimensions() {

@@ -21,6 +21,17 @@ Plywood::Plywood(std::string length, std::string width, std::string thick, std::
 	this->thick = std::stof(thick);
 }
 
+//copy construter
+Plywood::Plywood(Plywood& plywoodWood) {
+
+	length = plywoodWood.length;
+	width = plywoodWood.width;
+	thick = plywoodWood.thick;
+	price = plywoodWood.price;
+	available = plywoodWood.available;
+
+}
+
 
 std::string Plywood::dimentionCombination() {
 	return std::to_string(length) + "X" + std::to_string(width) + " - " + std::to_string(thick) + "'";

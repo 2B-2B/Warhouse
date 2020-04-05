@@ -25,7 +25,7 @@ public:
 	Dimentional(double, double, double, double, int); //contructor (length, width, height, price, available)
 	Dimentional(double, double, double, double, int, int); //contructor (length, width, height, price, amount, available)
 	
-	Dimentional(std::string, std::string, std::string, std::string, std::string); //contructor (length, width, height, price, available)
+	Dimentional(std::string length, std::string width, std::string height, std::string price, std::string available); //contructor (length, width, height, price, available)
 
 	//copy construter
 	Dimentional(Dimentional& dimentionalWood);

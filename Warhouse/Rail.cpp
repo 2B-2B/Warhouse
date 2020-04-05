@@ -17,6 +17,27 @@ Rail::Rail(double length, double height, std::string material, std::string type,
 	this->available = available;
 }
 
+//non-default overloaded construter
+//length, width, height, price, available - strings
+Rail::Rail(std::string length, std::string height, std::string material, std::string type, std::string price, std::string available) : Wood(price, available) {
+	this->length = std::stof(length);
+	this->height = std::stof(height);
+	this->material = material;
+	this->type = type;
+}
+
+//copy construter
+Rail::Rail(Rail& railWood) {
+
+	length = railWood.length;
+	height = railWood.height;
+	type = railWood.type;
+	material = railWood.material;
+	price = railWood.price;
+	available = railWood.available;
+
+}
+
 
 std::string Rail::dimentionCombination() {
 	return std::to_string(length) + "'' X " + std::to_string(height) + " '' " + type + " " + material;

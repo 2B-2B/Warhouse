@@ -292,6 +292,8 @@ private: System::Void Display_VisibleChanged(System::Object^ sender, System::Eve
 	//get the inventory from the warehouse
 	getWarehouseInventory();
 
+	//usersWarehouse.dim
+
 }
 
 };
