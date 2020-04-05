@@ -121,13 +121,20 @@
     <ClCompile Include="AddUser.cpp" />
     <ClCompile Include="AddWarehouse.cpp" />
     <ClCompile Include="AdminConsole.cpp" />
+    <ClCompile Include="Dimentional.cpp" />
     <ClCompile Include="Display.cpp" />
+    <ClCompile Include="Finishing.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="ManageUsers.cpp" />
     <ClCompile Include="ManageWarehouses.cpp" />
     <ClCompile Include="Order.cpp" />
+    <ClCompile Include="Plywood.cpp" />
+    <ClCompile Include="Rail.cpp" />
     <ClCompile Include="Ship.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Users.cpp" />
+    <ClCompile Include="Warehouse.cpp" />
+    <ClCompile Include="Wood.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AddUser.h">
@@ -140,9 +147,11 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="database.h" />
+    <ClInclude Include="Dimentional.h" />
     <ClInclude Include="Display.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Finishing.h" />
     <ClInclude Include="Login.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -155,10 +164,15 @@
     <ClInclude Include="Order.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Plywood.h" />
+    <ClInclude Include="Rail.h" />
     <ClInclude Include="Ship.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="sqlite3.h" />
+    <ClInclude Include="Users.h" />
+    <ClInclude Include="Warehouse.h" />
+    <ClInclude Include="Wood.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddUser.resx">

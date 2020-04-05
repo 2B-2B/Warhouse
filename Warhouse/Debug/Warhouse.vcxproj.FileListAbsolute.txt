@@ -9,3 +9,14 @@ C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\Debug\Warhouse.ManageWarehouse
 C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\Debug\Warhouse.Order.resources
 C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\Debug\Warhouse.Ship.resources
 C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\Debug\Warhouse.vcxproj.GenerateResource.cache
+C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\Debug\Warhouse.vcxprojAssemblyReference.cache
+C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\Debug\Warhouse.AddUser.resources
+C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\Debug\Warhouse.AddWarehouse.resources
+C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\Debug\Warhouse.AdminConsole.resources
+C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\Debug\Warhouse.Display.resources
+C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\Debug\Warhouse.Login.resources
+C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\Debug\Warhouse.ManageUsers.resources
+C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\Debug\Warhouse.ManageWarehouses.resources
+C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\Debug\Warhouse.Order.resources
+C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\Debug\Warhouse.Ship.resources
+C:\Users\ryan_\Desktop\Updated Warehouse\Warhouse\Warhouse\Debug\Warhouse.vcxproj.GenerateResource.cache
