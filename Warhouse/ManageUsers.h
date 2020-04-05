@@ -49,7 +49,7 @@ namespace Warhouse {
 	private: System::Windows::Forms::ListBox^ usersDisplayListBox;
 	protected:
 	private: System::Windows::Forms::Button^ addNewUserButton;
-	private: System::Windows::Forms::Button^ removeUserButton;
+
 	private: System::Windows::Forms::Button^ backButton;
 
 	private:
@@ -67,7 +67,6 @@ namespace Warhouse {
 		{
 			this->usersDisplayListBox = (gcnew System::Windows::Forms::ListBox());
 			this->addNewUserButton = (gcnew System::Windows::Forms::Button());
-			this->removeUserButton = (gcnew System::Windows::Forms::Button());
 			this->backButton = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
@@ -90,16 +89,6 @@ namespace Warhouse {
 			this->addNewUserButton->UseVisualStyleBackColor = true;
 			this->addNewUserButton->Click += gcnew System::EventHandler(this, &ManageUsers::addNewUserButton_Click);
 			// 
-			// removeUserButton
-			// 
-			this->removeUserButton->Location = System::Drawing::Point(339, 106);
-			this->removeUserButton->Name = L"removeUserButton";
-			this->removeUserButton->Size = System::Drawing::Size(181, 65);
-			this->removeUserButton->TabIndex = 2;
-			this->removeUserButton->Text = L"Remove User";
-			this->removeUserButton->UseVisualStyleBackColor = true;
-			this->removeUserButton->Click += gcnew System::EventHandler(this, &ManageUsers::removeUserButton_Click);
-			// 
 			// backButton
 			// 
 			this->backButton->Location = System::Drawing::Point(339, 525);
@@ -116,7 +105,6 @@ namespace Warhouse {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(532, 613);
 			this->Controls->Add(this->backButton);
-			this->Controls->Add(this->removeUserButton);
 			this->Controls->Add(this->addNewUserButton);
 			this->Controls->Add(this->usersDisplayListBox);
 			this->Name = L"ManageUsers";
@@ -138,12 +126,7 @@ namespace Warhouse {
 		*thisGui = 3; //Sets gui to open AdminConsole
 		this->Close(); //Closes this gui
 	}
-	    //Deletes the user from the data base
-    private: System::Void removeUserButton_Click(System::Object^ sender, System::EventArgs^ e) {
-		//
-		//TODO: Add Delete user code
-		//
-    }
+
         //Initalizing the gui with the values from the data base
 	private: System::Void ManageUsers_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
 		//

@@ -49,7 +49,7 @@ namespace Warhouse {
 	private: System::Windows::Forms::ListBox^ warehouseDisplayListBox;
 	protected:
 	private: System::Windows::Forms::Button^ addNewWarehouseButton;
-	private: System::Windows::Forms::Button^ removeWarehouseButton;
+
 	private: System::Windows::Forms::Button^ backButton;
 
 	protected:
@@ -69,7 +69,6 @@ namespace Warhouse {
 		{
 			this->warehouseDisplayListBox = (gcnew System::Windows::Forms::ListBox());
 			this->addNewWarehouseButton = (gcnew System::Windows::Forms::Button());
-			this->removeWarehouseButton = (gcnew System::Windows::Forms::Button());
 			this->backButton = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
@@ -92,16 +91,6 @@ namespace Warhouse {
 			this->addNewWarehouseButton->UseVisualStyleBackColor = true;
 			this->addNewWarehouseButton->Click += gcnew System::EventHandler(this, &ManageWarehouses::addNewWarehouseButton_Click);
 			// 
-			// removeWarehouseButton
-			// 
-			this->removeWarehouseButton->Location = System::Drawing::Point(345, 116);
-			this->removeWarehouseButton->Name = L"removeWarehouseButton";
-			this->removeWarehouseButton->Size = System::Drawing::Size(131, 74);
-			this->removeWarehouseButton->TabIndex = 2;
-			this->removeWarehouseButton->Text = L"Remove Warehouse";
-			this->removeWarehouseButton->UseVisualStyleBackColor = true;
-			this->removeWarehouseButton->Click += gcnew System::EventHandler(this, &ManageWarehouses::removeWarehouseButton_Click);
-			// 
 			// backButton
 			// 
 			this->backButton->Location = System::Drawing::Point(345, 522);
@@ -118,7 +107,6 @@ namespace Warhouse {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(504, 619);
 			this->Controls->Add(this->backButton);
-			this->Controls->Add(this->removeWarehouseButton);
 			this->Controls->Add(this->addNewWarehouseButton);
 			this->Controls->Add(this->warehouseDisplayListBox);
 			this->Name = L"ManageWarehouses";
@@ -133,12 +121,6 @@ private: System::Void addNewWarehouseButton_Click(System::Object^ sender, System
 	*thisXPushed = false; //Tells the driver program that the gui was not closed
 	*thisGui = 2; //Sets gui to open AddWarehouse
 	this->Close(); //Closes this gui
-}
-    //Deletes the warehouse from the data base
-private: System::Void removeWarehouseButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	//
-	//TODO: Add Delete warehouse code
-	//
 }
 	//Closes the gui and goes to the previus gui 
 private: System::Void backButton_Click(System::Object^ sender, System::EventArgs^ e) {
