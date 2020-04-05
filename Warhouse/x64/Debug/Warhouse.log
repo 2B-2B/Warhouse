@@ -1,9 +1,10 @@
-<<<<<<< HEAD
-﻿  AdminConsole.cpp
+﻿  Display.cpp
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\Display.h(280,1): error C2661: 'Warehouse::Warehouse': no overloaded function takes 3 arguments
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\Display.cpp(188,109): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Warehouse'
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\Display.cpp(188,109): message : No constructor could take the source type, or constructor overload resolution was ambiguous
   Source.cpp
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\Display.h(280,1): error C2661: 'Warehouse::Warehouse': no overloaded function takes 3 arguments
+  Users.cpp
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\Users.cpp(54,190): error C2661: 'Warehouse::Warehouse': no overloaded function takes 3 arguments
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\Users.cpp(74,211): error C2661: 'Warehouse::Warehouse': no overloaded function takes 3 arguments
   Generating Code...
-  AddUser.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  Warhouse.vcxproj -> C:\Users\ryan_\Desktop\File Base Project\Warhouse\x64\Debug\Warhouse.exe
-=======
-﻿  Warhouse.vcxproj -> C:\Users\aavin\OneDrive\Desktop\Warhouse\x64\Debug\Warhouse.exe
->>>>>>> 4d76b0daaaf23f995fbc18435c1be4e018065f69
