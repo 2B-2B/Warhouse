@@ -99,10 +99,14 @@ namespace Warhouse {
 		{
 			if (components)
 			{
-				delete components;
 
+
+				delete components;
 				delete usersWarehouse;
-				
+				delete dimentionalWood;
+				delete plywoodWood;
+				delete railWood;
+				delete finishingWood;
 
 			}
 		}
@@ -292,7 +296,8 @@ private: System::Void Display_VisibleChanged(System::Object^ sender, System::Eve
 	//get the inventory from the warehouse
 	getWarehouseInventory();
 
-	//usersWarehouse.dim
+	std::cout << "\n~~~~here~~~~\n";
+	std::cout << usersWarehouse->printTotalInventoryToGUI(*(numberOfItems+1), *(numberOfItems+2),*(numberOfItems+3),*(numberOfItems+4));
 
 }
 

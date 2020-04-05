@@ -40,6 +40,10 @@ public:
 	System::String^ getAmountSS();
 
 
+	std::string printToFile();
+	std::string printToDisplay();
+
+
 };
 
 #endif

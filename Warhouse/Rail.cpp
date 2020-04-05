@@ -38,7 +38,7 @@ Rail::Rail(Rail& railWood) {
 
 }
 
-
+/*
 std::string Rail::dimentionCombination() {
 	return std::to_string(length) + "'' X " + std::to_string(height) + " '' " + type + " " + material;
 }
@@ -46,4 +46,15 @@ std::string Rail::dimentionCombination() {
 System::String^ Rail::getDimentionSS() {
 	System::String^ ss = gcnew System::String(dimentionCombination().c_str());
 	return ss;
+}
+*/
+
+//prints the dimensions as a standard string
+std::string Rail::printToFile() {
+	return std::to_string(length) + "," + std::to_string(height) + "," + material + "," + type + ',' + Wood::printToFile();
+}
+
+//print to the GUI
+std::string Rail::printToDisplay() {
+	return std::to_string(length) + "ft X " + std::to_string(height) + "ft made from " + material + " type: " + type + " @ " + Wood::printToDisplay();
 }

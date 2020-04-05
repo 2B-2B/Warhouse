@@ -52,3 +52,17 @@ System::String^ Wood::getAmountSS() {
 
 	return ss;
 }
+
+//used to print to the file
+std::string Wood::printToFile() {
+
+	return std::to_string(price) + "," + std::to_string(available) + "\n";
+
+}
+
+//used to print to the GUI
+std::string Wood::printToDisplay() {
+
+	return std::to_string(price) + "$ per item" + "\n";
+
+}

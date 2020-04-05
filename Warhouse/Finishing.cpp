@@ -38,6 +38,7 @@ Finishing::Finishing(Finishing& finishingWood) {
 
 }
 
+/*
 //combination string function
 std::string Finishing::dimentionCombination() {
 	return std::to_string(length) + "X"+ std::to_string(height) + mouldType + " " + material;
@@ -47,4 +48,15 @@ std::string Finishing::dimentionCombination() {
 System::String^ Finishing::getDimentionSS() {
 	System::String^ ss = gcnew System::String(dimentionCombination().c_str());
 	return ss;
+}
+*/
+
+
+std::string Finishing::printToFile() {
+	return std::to_string(length) + "," + std::to_string(height) + "," + material + "," + mouldType + ',' + Wood::printToFile();
+}
+
+//print to the GUI
+std::string Finishing::printToDisplay() {
+	return std::to_string(length) + "ft X " + std::to_string(height) + "ft made from " + material + " type: " + mouldType + " @ " + Wood::printToDisplay();
 }

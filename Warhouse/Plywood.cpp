@@ -32,7 +32,7 @@ Plywood::Plywood(Plywood& plywoodWood) {
 
 }
 
-
+/*
 std::string Plywood::dimentionCombination() {
 	return std::to_string(length) + "X" + std::to_string(width) + " - " + std::to_string(thick) + "'";
 }
@@ -40,4 +40,15 @@ std::string Plywood::dimentionCombination() {
 System::String^ Plywood::getDimentionSS() {
 	System::String^ ss = gcnew System::String(dimentionCombination().c_str());
 	return ss;
+}
+*/
+
+//prints the dimensions as a standard string
+std::string Plywood::printToFile() {
+	return std::to_string(length) + "," + std::to_string(width) + "," + std::to_string(thick) + "," + Wood::printToFile();
+}
+
+//print to the GUI
+std::string Plywood::printToDisplay() {
+	return std::to_string(length) + "ft X " + std::to_string(width) + "ft plywood @ " + std::to_string(thick) + "in thickness @ " + Wood::printToDisplay();
 }
