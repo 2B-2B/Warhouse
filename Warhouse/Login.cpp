@@ -32,20 +32,6 @@ Warhouse::Login::Login (int* gui, bool* xPushed, Users *currentUser)
 }
 
 
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-/*
-
-the get user function is used to populate the array of users we have stored in the data base
-you can make a new fucntion for the initalization of the users from the data base and 
-we can comment the text file one out after we know it works.
-
-we do need to know how many user there will be, for creating the array and for checking the array
-
-*/
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-
-
-
 
 //to initialize the user object
 void Warhouse::Login::getUserInfo() {
@@ -76,16 +62,18 @@ void Warhouse::Login::getUserInfo() {
 		std::unique_ptr <std::string> clearence(new std::string);
 		//store there assoicated warehouse info
 		std::unique_ptr <std::string> address(new std::string);
+		std::unique_ptr <std::string> city(new std::string);
 		std::unique_ptr <std::string> province(new std::string);
 		std::unique_ptr <std::string> postalCode(new std::string);
 
 		// get the data from the file for the user
-		std::getline(userData, *userName, '\t');
-		std::getline(userData, *password, '\t');
-		std::getline(userData, *clearence, '\t');
+		std::getline(userData, *userName, ',');
+		std::getline(userData, *password, ',');
+		std::getline(userData, *clearence, ',');
 		//get there assoicated warehouse info 
-		std::getline(userData, *address, '\t');
-		std::getline(userData, *province, '\t');
+		std::getline(userData, *address, ',');
+		std::getline(userData, *city, ',');
+		std::getline(userData, *province, ',');
 		std::getline(userData, *postalCode);
 
 		//construct the user.

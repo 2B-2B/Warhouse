@@ -1,20 +1,5 @@
-﻿  AddUser.cpp
-  AddWarehouse.cpp
-  AdminConsole.cpp
-  Dimentional.cpp
-  Display.cpp
-  Finishing.cpp
-  Login.cpp
-  ManageUsers.cpp
-  ManageWarehouses.cpp
-  Order.cpp
-  Plywood.cpp
-  Rail.cpp
-  Ship.cpp
+﻿  AdminConsole.cpp
   Source.cpp
-  Users.cpp
-  Warehouse.cpp
-  Wood.cpp
   Generating Code...
   AddUser.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Warhouse.vcxproj -> C:\Users\ryan_\Desktop\File Base Project\Warhouse\x64\Debug\Warhouse.exe

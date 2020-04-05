@@ -1,0 +1,2 @@
+dimentional,4,8,0.25,3.50,10
+dimentional,2,2,1,5.00,12

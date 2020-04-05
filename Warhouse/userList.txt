@@ -1,3 +1,3 @@
-user1	pass123	admin	123 street	ON	J4H6F5
-user2	pass456	general	456 street	AB	J4H6F5
-user3	pass789	general	789 street	BC	J4H6F5
+user1,pass123,admin,123,street,city1,ON,J4H6F5
+user2,pass456,general,456,street,city2,AB,J4H6F5
+user3,pass789,general,789,street,city3,BC,J4H6F5

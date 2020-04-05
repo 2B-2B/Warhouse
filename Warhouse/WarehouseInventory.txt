@@ -1,9 +1,9 @@
-123 street	ON	J4H6F5
-dimentional	2X4-0.5'	4.55	30
-dimentional	4X4-2'	8.99	50
-456 street	AB	J4H6F5
-dimentional	4	4	1	6.00	25
-dimentional	8	8	0.5	12.00	20
-789 street	BC	J4H6F5
-dimentional	4X8-0.25'	3.50	10
-dimentional	2X2-1'	5.00	12
+123,street,city1,ON,J4H6F5
+dimentional,2,4,0,5,4.55,30
+dimentional,4,4,2,,8.99,50
+456,street,city2,AB,J4H6F5
+dimentional,4,4,1,6.00,25
+dimentional,8,8,0.5,12.00,20
+789,street,city3,BC,J4H6F5
+dimentional,4,8,0.25,3.50,10
+dimentional,2,2,1,5.00,12

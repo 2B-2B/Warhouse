@@ -18,9 +18,12 @@ class Warehouse: public Dimentional, Plywood, Rail, Finishing
 
 protected:
 	//could make this a location class
-	std::string postalCode;
-	std::string province;
+	
 	std::string address;
+	std::string city;
+	std::string province;
+	std::string postalCode;
+
 	Dimentional* dimentionalWood;
 	Plywood* plywoodWood;
 	Rail* railWood;
@@ -29,24 +32,27 @@ protected:
 public:
 	
 	//getter functions
-	std::string getPostalCode() { return postalCode; }
-	std::string getProvince() { return province; }
 	std::string getAddress() { return address; }
+	std::string getCity() { return city; }
+	std::string getProvince() { return province; }
+	std::string getPostalCode() { return postalCode; }
 
 	//setter function
-	void setPostalCode(std::string postalCode) { this->postalCode = postalCode; }
-	void setProvince(std::string province) { this->province = province; }
 	void setAddress(std::string address) { this->address = address; }
-
-	
+	void setCity(std::string city) { this->city = city; }
+	void setProvince(std::string province) { this->province = province; }
+	void setPostalCode(std::string postalCode) { this->postalCode = postalCode; }
 
 
 
 
 	//convert to system string
-	System::String^ getPostalCodeSS();
-	System::String^ getProvinceSS();
 	System::String^ getAddressSS();
+	System::String^ getCitySS();
+	System::String^ getProvinceSS();
+	System::String^ getPostalCodeSS();
+	
+	
 	
 	//this is to print the full address as a string
 	std::string print();
@@ -59,16 +65,16 @@ public:
 
 	//non-default constructer - standard string
 	//address, province, postalCode
-	Warehouse(std::string address, std::string province, std::string postalCode);
+	Warehouse(std::string address, std::string city, std::string province, std::string postalCode);
 
 	//overloaded constructer - system string
-	Warehouse(System::String^ address, System::String^ province, System::String^ postalCode);
+	Warehouse(System::String^ address, System::String^ city, System::String^ province, System::String^ postalCode);
 
 	//non-default constructer overloaded with wood types - standard string
 	//address, province, postalCode, dimentionalWood, plywoodWood, railWood, finishingWood
-	Warehouse(std::string address, std::string province, std::string postalCode, Dimentional& dimentionalWood, Plywood& plywoodWood, Rail& railWood, Finishing& finishingWood);
+	Warehouse(std::string address, std::string city, std::string province, std::string postalCode, Dimentional& dimentionalWood, Plywood& plywoodWood, Rail& railWood, Finishing& finishingWood);
 
-	Warehouse(std::string address, std::string province, std::string postalCode, Dimentional& dimentionalWood);
+	Warehouse(std::string address, std::string city, std::string province, std::string postalCode, Dimentional& dimentionalWood);
 
 
 	//construters for its objects
@@ -81,6 +87,13 @@ public:
 
 	
 	void setDimentionalWood(Dimentional& dimentionalWood);
+	//Plywood* plywoodWood;
+	//Rail* railWood;
+	//Finishing* finishingWood;
+	//void setPlywoodWood();
+	//void setPlywoodWood();
+	//void setPlywoodWood();
+
 
 };
 

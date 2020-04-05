@@ -127,5 +127,14 @@
     <Text Include="WarehouseInventory.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="123,street,city1,ON,J4H6F5.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="456,street,city2,AB,J4H6F5.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="789,street,city3,BC,J4H6F5.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

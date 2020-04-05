@@ -205,6 +205,9 @@
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="123,street,city1,ON,J4H6F5.txt" />
+    <Text Include="456,street,city2,AB,J4H6F5.txt" />
+    <Text Include="789,street,city3,BC,J4H6F5.txt" />
     <Text Include="userList.txt" />
     <Text Include="WarehouseInventory.txt" />
   </ItemGroup>
