@@ -73,9 +73,6 @@ int main() {
 		}
 		else if (gui == 4) { //Runs the Display gui
 
-
-			//std::cout << currentUser.getUsername() << std::endl;
-
 			Warhouse::Display^ display = gcnew Warhouse::Display(&gui, &xPushed, &isGeneral, &currentUser); //Creates an intance of the Display gui
 			Application::Run(display); //Runs the instance of the Display gui NOTE: this pauses the thread untill the gui is closed
 			(xPushed) ? close = true : xPushed = true; //After the gui is closed checks if the program should exit

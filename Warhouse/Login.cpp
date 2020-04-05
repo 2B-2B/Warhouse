@@ -78,6 +78,7 @@ void Warhouse::Login::getUserInfo() {
 
 		//construct the user.
 		*(userInfo + i) = Users(*userName, *password, *clearence, *address, *city, *province, *postalCode);
+
 		//cant use the constructer to change the values of warehouse
 		(userInfo + i)->setAddress(*address);
 		(userInfo + i)->setCity(*city);
@@ -122,7 +123,7 @@ System::Void Warhouse::Login::loginButton_Click(System::Object^ sender, System::
 	search = 0;
 
 	
-
+	
 	//search the entire array
 	while (search < userCount) {
 
@@ -137,10 +138,10 @@ System::Void Warhouse::Login::loginButton_Click(System::Object^ sender, System::
 					*thisXPushed = false; //Tells the driver program that the gui was not closed
 					*thisGui = 3; //Sets gui to open AdminConsole
 					*currentUser = *(userInfo + search);//set the logged in user 
-					
-
-
-
+					currentUser->setAddress((userInfo + search)->getAddress());
+					currentUser->setCity((userInfo + search)->getCity());
+					currentUser->setProvince((userInfo + search)->getProvince());
+					currentUser->setPostalCode((userInfo + search)->getPostalCode());
 					this->Close(); //Closes this gui
 				}
 				else {
@@ -148,6 +149,7 @@ System::Void Warhouse::Login::loginButton_Click(System::Object^ sender, System::
 					*thisGui = 4; //Sets gui to open Display
 					*currentUser = *(userInfo + search);//set the logged in user 
 					currentUser->setAddress((userInfo + search)->getAddress());
+					currentUser->setCity((userInfo + search)->getCity());
 					currentUser->setProvince((userInfo + search)->getProvince());
 					currentUser->setPostalCode((userInfo + search)->getPostalCode());
 					this->Close(); //Closes this gui

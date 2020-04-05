@@ -1,5 +1,13 @@
+<<<<<<< HEAD
+﻿  Login.cpp
+  Source.cpp
+  Generating Code...
+  AddUser.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Warhouse.vcxproj -> C:\Users\ryan_\Desktop\File Base Project\Warhouse\x64\Debug\Warhouse.exe
+=======
 ﻿  AddUser.cpp
   Source.cpp
   Generating Code...
   AddUser.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Warhouse.vcxproj -> C:\Users\aavin\OneDrive\Desktop\Warhouse\x64\Debug\Warhouse.exe
+>>>>>>> 83033807fb2e717383eb2127c7f0e4793522c3f4
