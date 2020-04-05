@@ -1,5 +1,8 @@
 #pragma once
 
+#include <msclr\marshal_cppstd.h>
+#include <fstream>
+
 namespace Warhouse {
 
 	using namespace System;
@@ -206,11 +209,29 @@ private: System::Void backButton_Click(System::Object^ sender, System::EventArgs
 	*thisGui = 7; //Sets gui to open ManageWarehouses
 	this->Close(); //Closes this gui
 }
-	    //Adds the user to the database, closes the gui and goes to the previus gui 
+	    //Adds the warehouse to the database, closes the gui and goes to the previus gui 
 private: System::Void addButton_Click(System::Object^ sender, System::EventArgs^ e) {
-	//
-	//TODO: Add save user code
-	//
+	//appends the new warehouse to the text file
+	std::ofstream warehouseList;
+	msclr::interop::marshal_context context;
+
+	//Opens the required text files
+	warehouseList.open("WarehouseInventory.txt", std::ios::app);
+
+	//Gets the entered data from the gui
+	System::String^ province = this->provinceComboBox->Text;
+	std::string provinceString = context.marshal_as<std::string>(province);
+	System::String^ city = this->cityTextBox->Text;
+	std::string cityString = context.marshal_as<std::string>(city);
+	System::String^ adress = this->addresTextBox->Text;
+	std::string adressString = context.marshal_as<std::string>(adress);
+	System::String^ postalCode = this->postalCodeTextBox->Text;
+	std::string postalCodeString = context.marshal_as<std::string>(postalCode);
+
+	//Appends the new warehouse to the users text file
+	warehouseList << "\n" << adressString << "," << cityString << "," << provinceString << "," << postalCodeString;
+	warehouseList.close();
+
 	*thisXPushed = false; //Tells the driver program that the gui was not closed
 	*thisGui = 7; //Closes this gui
 	this->Close();
