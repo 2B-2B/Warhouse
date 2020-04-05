@@ -1,24 +1,23 @@
 ﻿  AddUser.cpp
-C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\database.h(91,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\database.h(77,9): warning C4101: 'errMsg': unreferenced local variable
-C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\database.h(144,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  Login.cpp
-C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\database.h(91,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\database.h(77,9): warning C4101: 'errMsg': unreferenced local variable
-C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\database.h(144,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\database.h(91,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : see declaration of 'strcpy'
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\database.h(77,9): warning C4101: 'errMsg': unreferenced local variable
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\database.h(144,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : see declaration of 'strcpy'
   Source.cpp
-C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\database.h(91,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\database.h(77,9): warning C4101: 'errMsg': unreferenced local variable
-C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\database.h(144,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\database.h(91,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : see declaration of 'strcpy'
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\database.h(77,9): warning C4101: 'errMsg': unreferenced local variable
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\database.h(144,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : see declaration of 'strcpy'
   Generating Code...
-C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\database.h(124): warning C4715: 'login': not all control paths return a value
-C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\database.h(171): warning C4715: 'addUsertoDB': not all control paths return a value
-C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\database.h(124): warning C4715: 'login': not all control paths return a value
-C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\database.h(171): warning C4715: 'addUsertoDB': not all control paths return a value
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\database.h(124): warning C4715: 'login': not all control paths return a value
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\database.h(171): warning C4715: 'addUsertoDB': not all control paths return a value
+C:\Users\aavin\OneDrive\Desktop\Warhouse\Warhouse\database.h(171): warning C4715: 'addUsertoDB': not all control paths return a value
   AddUser.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
 Source.obj : warning LNK4248: unresolved typeref token (0100002B) for 'sqlite3'; image may not run
 Login.obj : warning LNK4248: unresolved typeref token (01000027) for 'sqlite3'; image may not run
-AddUser.obj : warning LNK4248: unresolved typeref token (01000028) for 'sqlite3'; image may not run
+AddUser.obj : warning LNK4248: unresolved typeref token (01000029) for 'sqlite3'; image may not run
 Source.obj : warning LNK4248: unresolved typeref token (0100002D) for 'sqlite3_stmt'; image may not run
 Login.obj : warning LNK4248: unresolved typeref token (01000029) for 'sqlite3_stmt'; image may not run
-  Warhouse.vcxproj -> C:\Users\Perry\Documents\GitHub\Warhouse\Debug\Warhouse.exe
+  Warhouse.vcxproj -> C:\Users\aavin\OneDrive\Desktop\Warhouse\Debug\Warhouse.exe
