@@ -1,0 +1,10 @@
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\Release\Warhouse.AddUser.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\Release\Warhouse.AddWarehouse.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\Release\Warhouse.AdminConsole.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\Release\Warhouse.Display.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\Release\Warhouse.Login.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\Release\Warhouse.ManageUsers.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\Release\Warhouse.ManageWarehouses.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\Release\Warhouse.Order.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\Release\Warhouse.Ship.resources
+C:\Users\Perry\Documents\GitHub\Warhouse\Warhouse\Release\Warhouse.vcxproj.GenerateResource.cache

@@ -1,0 +1,16 @@
+﻿  AddUser.cpp
+  AddWarehouse.cpp
+  AdminConsole.cpp
+  Display.cpp
+  Login.cpp
+  ManageUsers.cpp
+  ManageWarehouses.cpp
+  Order.cpp
+  Ship.cpp
+  Source.cpp
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...
+  AddUser.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+Source.obj : warning LNK4248: unresolved typeref token (01000024) for 'sqlite3'; image may not run
+AddUser.obj : warning LNK4248: unresolved typeref token (01000020) for 'sqlite3'; image may not run
+  Warhouse.vcxproj -> C:\Users\Perry\Documents\GitHub\Warhouse\Release\Warhouse.exe
