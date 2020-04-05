@@ -1,3 +1,15 @@
-﻿  Display.cpp
+﻿  Dimentional.cpp
+  Display.cpp
+  Finishing.cpp
+  Login.cpp
+  Plywood.cpp
+  Rail.cpp
+  Source.cpp
+  Users.cpp
+  Warehouse.cpp
+  Generating Code...
   AddUser.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+ManageWarehouses.obj : warning LNK4020: a type record in 'c:\users\ryan_\desktop\file base project\warhouse\warhouse\x64\debug\vc142.pdb' is corrupted; some symbols and types may not be accessible from the debugger
+ManageUsers.obj : warning LNK4020: a type record in 'c:\users\ryan_\desktop\file base project\warhouse\warhouse\x64\debug\vc142.pdb' is corrupted; some symbols and types may not be accessible from the debugger
+AddUser.obj : warning LNK4020: a type record in 'c:\users\ryan_\desktop\file base project\warhouse\warhouse\x64\debug\vc142.pdb' is corrupted; some symbols and types may not be accessible from the debugger
   Warhouse.vcxproj -> C:\Users\ryan_\Desktop\File Base Project\Warhouse\x64\Debug\Warhouse.exe

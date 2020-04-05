@@ -23,9 +23,10 @@ public:
 	//contructor
 	Plywood();	//default constructor
 	Plywood(double, double, double, double, int, int); //constructor (length, width, thick, price, amount, avaiable)
-	Plywood(std::string length, std::string width, std::string thick, std::string price, std::string available); //constructor (length, width, thick, price, amount, available)
+	Plywood(std::string length, std::string width, std::string thick, std::string price, std::string available); //constructor (length, width, thick, price, available)
 
-
+	//copy construter
+	Plywood(Plywood& plywoodWood);
 
 	//mutators
 	void setLength(double length) { this->length = length; }
@@ -36,6 +37,8 @@ public:
 	double getLength() const{ return this->length; }
 	double getWideth() const{ return this->width; }
 	double getThick() const{ return this->thick; }
+
+
 	
 
 	//additional functions

@@ -22,6 +22,13 @@ public:
 	Finishing();	//default constructor
 	Finishing(double, double, std::string, std::string, double, int, int); //contructor (lenght, height, material, mouldType, price, amount, available)
 
+	//non-default overloaded constructer
+	//length, height, material, type, price, available - strings
+	Finishing(std::string length, std::string height, std::string material, std::string mouldType, std::string price, std::string available);
+	
+	//copy construter
+	Finishing(Finishing& finishingWood);
+
 	//mutators
 	void setLength(double length) { this->length = length; }
 	void setThick(double height) { this->height = height; }

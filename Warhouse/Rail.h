@@ -23,6 +23,13 @@ public:
 	Rail();		//default contructor
 	Rail(double, double, std::string, std::string, double, int, int);	//contructor (length, height, material, type, price, amount, available)
 
+	//non-default overloaded constructer
+	//length, height, material, type, price, available - strings
+	Rail(std::string length, std::string height, std::string material, std::string type, std::string price, std::string available);
+
+	//copy construter
+	Rail(Rail& railWood);
+
 	//mutators
 	void setLength(double length) { this->length = length; }
 	void setThick(double height) { this->height = height; }

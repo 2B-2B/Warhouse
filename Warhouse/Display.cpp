@@ -42,39 +42,10 @@ void Warhouse::Display::getWarehouseInventory() {
 	std::cout << "number of items: " << *(numberOfItems + 0) << ", " << *(numberOfItems + 1) << ", " << *(numberOfItems + 2) << ", " << *(numberOfItems + 3) << ", " << *(numberOfItems + 4) << std::endl;
 
 	//create the number of objects for each type
-	if (*(numberOfItems + 1) != 0) {
-		dimentionalWood = new Dimentional[*(numberOfItems + 1)];
-	}
-	else {
-		dimentionalWood = new Dimentional[1];
-	}
-
-	if (*(numberOfItems + 2) != 0) {
-		plywoodWood = new Plywood[*(numberOfItems + 2)];
-	}
-	else {
-		plywoodWood = new Plywood[1];
-		
-	}
-
-	if (*(numberOfItems + 3) != 0) {
-		railWood = new Rail[*(numberOfItems + 3)];
-	}
-	else {
-		railWood = new Rail[1];
-	}
-
-	if (*(numberOfItems + 4) != 0) {
-		finishingWood = new Finishing[*(numberOfItems + 4)];
-	}
-	else {
-		finishingWood = new Finishing[1];
-	}
-	
-	
-	//temporary pointers for the warehouse
-	
-	
+	dimentionalWood = new Dimentional[*(numberOfItems + 1)];
+	plywoodWood = new Plywood[*(numberOfItems + 2)];
+	railWood = new Rail[*(numberOfItems + 3)];
+	finishingWood = new Finishing[*(numberOfItems + 4)];
 		
 	//positions for the array of the items
 	std::unique_ptr <int> dimensionalPost(new int);
@@ -108,12 +79,11 @@ void Warhouse::Display::getWarehouseInventory() {
 				std::unique_ptr <std::string> availbe(new std::string);
 
 				//read the values from the file
-				std::getline(warehouseData, *length, '\t');
-				std::getline(warehouseData, *wdith, '\t');
-				std::getline(warehouseData, *height, '\t');
-				std::getline(warehouseData, *price, '\t');
-				std::getline(warehouseData, *availbe, '\t');
-
+				std::getline(warehouseData, *length, ',');
+				std::getline(warehouseData, *wdith, ',');
+				std::getline(warehouseData, *height, ',');
+				std::getline(warehouseData, *price, ',');
+				std::getline(warehouseData, *availbe);
 
 				//construct the item
 				*(dimentionalWood + *dimensionalPost) = Dimentional(*length, *wdith, *height, *price, *availbe);
@@ -121,24 +91,67 @@ void Warhouse::Display::getWarehouseInventory() {
 			}
 			else if (*tempType == "plywood") {
 
+				//store the values temporaryly for the the peice of wood
+				std::unique_ptr <std::string> length(new std::string);
+				std::unique_ptr <std::string> wdith(new std::string);
+				std::unique_ptr <std::string> thick(new std::string);
+				std::unique_ptr <std::string> price(new std::string);
+				std::unique_ptr <std::string> availbe(new std::string);
 
-				std::cout << "error";
+				//read the values from the file
+				std::getline(warehouseData, *length, ',');
+				std::getline(warehouseData, *wdith, ',');
+				std::getline(warehouseData, *thick, ',');
+				std::getline(warehouseData, *price, ',');
+				std::getline(warehouseData, *availbe);
+
+				//construct the item
+				*(plywoodWood + *plywoodPost) = Plywood(*length, *wdith, *thick, *price, *availbe);
 
 
 			}
 			else if (*tempType == "rail") {
 
+				//store the values temporaryly for the the peice of wood
+				std::unique_ptr <std::string> length(new std::string);
+				std::unique_ptr <std::string> wdith(new std::string);
+				std::unique_ptr <std::string> material(new std::string);
+				std::unique_ptr <std::string> type(new std::string);
+				std::unique_ptr <std::string> price(new std::string);
+				std::unique_ptr <std::string> availbe(new std::string);
 
-				std::cout << "error";
+				//read the values from the file
+				std::getline(warehouseData, *length, ',');
+				std::getline(warehouseData, *wdith, ',');
+				std::getline(warehouseData, *material, ',');
+				std::getline(warehouseData, *type, ',');
+				std::getline(warehouseData, *price, ',');
+				std::getline(warehouseData, *availbe);
 
+				//construct the item
+				*(railWood + *railPost) = Rail(*length, *wdith, *material, *type, *price, *availbe);
 
 			}
 			else if (*tempType == "finishing") {
 
+				//store the values temporaryly for the the peice of wood
+				std::unique_ptr <std::string> length(new std::string);
+				std::unique_ptr <std::string> wdith(new std::string);
+				std::unique_ptr <std::string> material(new std::string);
+				std::unique_ptr <std::string> mouldType(new std::string);
+				std::unique_ptr <std::string> price(new std::string);
+				std::unique_ptr <std::string> availbe(new std::string);
 
-				std::cout << "error";
+				//read the values from the file
+				std::getline(warehouseData, *length, ',');
+				std::getline(warehouseData, *wdith, ',');
+				std::getline(warehouseData, *material, ',');
+				std::getline(warehouseData, *mouldType, ',');
+				std::getline(warehouseData, *price, ',');
+				std::getline(warehouseData, *availbe);
 
-
+				//construct the item
+				*(finishingWood + *finishingPost) = Finishing(*length, *wdith, *material, *mouldType, *price, *availbe);
 
 			}
 
@@ -146,15 +159,13 @@ void Warhouse::Display::getWarehouseInventory() {
 
 	}
 
-	//*usersWarehouse = Warehouse(usersWarehouse->getAddress(), usersWarehouse->getCity(), usersWarehouse->getProvince(), usersWarehouse->getPostalCode(), *dimentionalWood);
-	//std::cout << "warehouse has been Set \n";
-	//*usersWarehouse = Warehouse(usersWarehouse->getAddress(), usersWarehouse->getCity(), usersWarehouse->getProvince(), usersWarehouse->getPostalCode(), *dimentionalWood, *plywoodWood, *railWood, *finishingWood);
-
-
+	//set the user warehouse inventory
 	usersWarehouse->setDimentionalWood(*dimentionalWood);
+	usersWarehouse->setPlywoodWood(*plywoodWood);
+	usersWarehouse->setRailWood(*railWood);
+	usersWarehouse->setFinishingWood(*finishingWood);
 	
 	std::cout << "leaving the inital\n";
-
 }
 
 

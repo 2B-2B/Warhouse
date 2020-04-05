@@ -76,23 +76,18 @@ public:
 
 	Warehouse(std::string address, std::string city, std::string province, std::string postalCode, Dimentional& dimentionalWood);
 
-
-	//construters for its objects
-	//standard string
-	//Warehouse(std::string address, std::string province, std::string postalCode, Dimentional dimentionalWood);
-	//system string
-	//Warehouse(System::String^ address, System::String^ province, System::String^ postalCode, Dimentional dimentionalWood);
-
-
-
 	
 	void setDimentionalWood(Dimentional& dimentionalWood);
-	//Plywood* plywoodWood;
-	//Rail* railWood;
-	//Finishing* finishingWood;
 	void setPlywoodWood(Plywood& plywoodWood);
 	void setRailWood(Rail& railWood);
 	void setFinishingWood(Finishing& finishingWood);
+
+	std::string printDimentionalWood(int numberOfTypes);
+	std::string printPlywoodWood(int numberOfTypes);
+	std::string printRailWood(int numberOfTypes);
+	std::string printFinishingWood(int numberOfTypes);
+
+	std::string printTotalInventory();
 
 
 };
