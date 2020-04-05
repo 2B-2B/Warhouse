@@ -96,20 +96,6 @@ Warehouse::Warehouse(std::string address, std::string city, std::string province
 
 }
 
-//overloaded construter, with a dimentional wood & standard string
-//Warehouse::Warehouse(std::string address, std::string province, std::string postalCode, Dimentional dimentionalWood):Dimentional(dimentionalWood) {
-
-//	*this = Warehouse(address, province, postalCode);
-
-//}
-
-//overloaded construter, with a dimentional wood & system string
-//Warehouse::Warehouse(System::String^ address, System::String^ province, System::String^ postalCode, Dimentional dimentionalWood) :Dimentional(dimentionalWood) {
-
-//	*this = Warehouse(address, province, postalCode);
-
-//}
-
 
 //set the dimentionalwoof of the warehouse;
 void Warehouse::setDimentionalWood(Dimentional& dimentionalWood) {
@@ -137,4 +123,42 @@ void Warehouse::setFinishingWood(Finishing& finishingWood) {
 
 	this->finishingWood = &finishingWood;
 
+}
+
+//print all the dimentional values stored
+std::string Warehouse::printDimentionalWood(int numberOfTypes) {
+
+
+
+}
+
+//print all the playwood values stored
+std::string Warehouse::printPlywoodWood(int numberOfTypes) {
+
+
+
+}
+
+//print all the rail values stored
+std::string Warehouse::printRailWood(int numberOfTypes) {
+
+	std::string allRailsString;
+
+	for (int i = 0; i < numberOfTypes; i++) {
+		
+	}
+
+
+}
+
+//print all the finishing values stored
+std::string Warehouse::printFinishingWood(int numberOfTypes){
+
+
+}
+
+//print all the items stored
+std::string Warehouse::printTotalInventory(int numberOfDimensionalTypes, int numberOfPlywoodTypes, int numberOfRailTypes, int numberOfFinishingTypes) {
+
+	return printDimentionalWood(numberOfDimensionalTypes) + printPlywoodWood(numberOfPlywoodTypes) + printRailWood(numberOfRailTypes) + printFinishingWood(numberOfFinishingTypes);
 }

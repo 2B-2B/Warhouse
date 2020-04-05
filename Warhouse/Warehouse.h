@@ -87,7 +87,7 @@ public:
 	std::string printRailWood(int numberOfTypes);
 	std::string printFinishingWood(int numberOfTypes);
 
-	std::string printTotalInventory();
+	std::string printTotalInventory(int numberOfDimensionalTypes, int numberOfPlywoodTypes, int numberOfRailTypes, int numberOfFinishingTypes);
 
 
 };
