@@ -19,7 +19,8 @@ namespace Warhouse {
 	{
 		//Variable declaration
 		int* thisGui = nullptr;
-		bool* thisXPushed = nullptr;
+	private: System::Windows::Forms::SaveFileDialog^ saveFileDialog1;
+		   bool* thisXPushed = nullptr;
 	public:
 		ManageWarehouses(void)
 		{
@@ -73,11 +74,13 @@ namespace Warhouse {
 			this->warehouseDisplayListBox = (gcnew System::Windows::Forms::ListBox());
 			this->addNewWarehouseButton = (gcnew System::Windows::Forms::Button());
 			this->backButton = (gcnew System::Windows::Forms::Button());
+			this->saveFileDialog1 = (gcnew System::Windows::Forms::SaveFileDialog());
 			this->SuspendLayout();
 			// 
 			// warehouseDisplayListBox
 			// 
 			this->warehouseDisplayListBox->FormattingEnabled = true;
+			this->warehouseDisplayListBox->HorizontalScrollbar = true;
 			this->warehouseDisplayListBox->ItemHeight = 20;
 			this->warehouseDisplayListBox->Location = System::Drawing::Point(12, 12);
 			this->warehouseDisplayListBox->Name = L"warehouseDisplayListBox";

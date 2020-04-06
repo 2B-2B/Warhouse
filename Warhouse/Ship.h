@@ -133,9 +133,11 @@ namespace Warhouse {
 			// shipDisplayListBox
 			// 
 			this->shipDisplayListBox->FormattingEnabled = true;
+			this->shipDisplayListBox->HorizontalScrollbar = true;
 			this->shipDisplayListBox->ItemHeight = 20;
 			this->shipDisplayListBox->Location = System::Drawing::Point(12, 202);
 			this->shipDisplayListBox->Name = L"shipDisplayListBox";
+			this->shipDisplayListBox->ScrollAlwaysVisible = true;
 			this->shipDisplayListBox->Size = System::Drawing::Size(430, 244);
 			this->shipDisplayListBox->TabIndex = 31;
 			// 

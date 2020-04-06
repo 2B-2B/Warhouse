@@ -149,55 +149,57 @@ namespace Warhouse {
 			// ityDisplayLabel
 			// 
 			this->ityDisplayLabel->AutoSize = true;
-			this->ityDisplayLabel->Location = System::Drawing::Point(11, 58);
+			this->ityDisplayLabel->Location = System::Drawing::Point(12, 72);
 			this->ityDisplayLabel->Name = L"ityDisplayLabel";
-			this->ityDisplayLabel->Size = System::Drawing::Size(31, 17);
+			this->ityDisplayLabel->Size = System::Drawing::Size(35, 20);
 			this->ityDisplayLabel->TabIndex = 0;
 			this->ityDisplayLabel->Text = L"City";
 			// 
 			// ostalCodeDisplayLabel
 			// 
 			this->ostalCodeDisplayLabel->AutoSize = true;
-			this->ostalCodeDisplayLabel->Location = System::Drawing::Point(11, 86);
+			this->ostalCodeDisplayLabel->Location = System::Drawing::Point(12, 108);
 			this->ostalCodeDisplayLabel->Name = L"ostalCodeDisplayLabel";
-			this->ostalCodeDisplayLabel->Size = System::Drawing::Size(84, 17);
+			this->ostalCodeDisplayLabel->Size = System::Drawing::Size(95, 20);
 			this->ostalCodeDisplayLabel->TabIndex = 1;
 			this->ostalCodeDisplayLabel->Text = L"Postal Code";
 			// 
 			// provinceDisplayLAbel
 			// 
 			this->provinceDisplayLAbel->AutoSize = true;
-			this->provinceDisplayLAbel->Location = System::Drawing::Point(11, 34);
+			this->provinceDisplayLAbel->Location = System::Drawing::Point(12, 42);
 			this->provinceDisplayLAbel->Name = L"provinceDisplayLAbel";
-			this->provinceDisplayLAbel->Size = System::Drawing::Size(63, 17);
+			this->provinceDisplayLAbel->Size = System::Drawing::Size(69, 20);
 			this->provinceDisplayLAbel->TabIndex = 2;
 			this->provinceDisplayLAbel->Text = L"Province";
 			// 
 			// addresDisplayLabel
 			// 
 			this->addresDisplayLabel->AutoSize = true;
-			this->addresDisplayLabel->Location = System::Drawing::Point(11, 7);
+			this->addresDisplayLabel->Location = System::Drawing::Point(12, 9);
 			this->addresDisplayLabel->Name = L"addresDisplayLabel";
-			this->addresDisplayLabel->Size = System::Drawing::Size(53, 17);
+			this->addresDisplayLabel->Size = System::Drawing::Size(60, 20);
 			this->addresDisplayLabel->TabIndex = 3;
 			this->addresDisplayLabel->Text = L"Addres";
 			// 
 			// itemDisplayListBox
 			// 
 			this->itemDisplayListBox->FormattingEnabled = true;
-			this->itemDisplayListBox->ItemHeight = 16;
-			this->itemDisplayListBox->Location = System::Drawing::Point(196, 10);
+			this->itemDisplayListBox->HorizontalScrollbar = true;
+			this->itemDisplayListBox->ItemHeight = 20;
+			this->itemDisplayListBox->Location = System::Drawing::Point(220, 12);
 			this->itemDisplayListBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->itemDisplayListBox->Name = L"itemDisplayListBox";
-			this->itemDisplayListBox->Size = System::Drawing::Size(1138, 500);
+			this->itemDisplayListBox->ScrollAlwaysVisible = true;
+			this->itemDisplayListBox->Size = System::Drawing::Size(1280, 624);
 			this->itemDisplayListBox->TabIndex = 4;
 			// 
 			// shipButton
 			// 
-			this->shipButton->Location = System::Drawing::Point(11, 228);
+			this->shipButton->Location = System::Drawing::Point(12, 285);
 			this->shipButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->shipButton->Name = L"shipButton";
-			this->shipButton->Size = System::Drawing::Size(110, 50);
+			this->shipButton->Size = System::Drawing::Size(124, 62);
 			this->shipButton->TabIndex = 5;
 			this->shipButton->Text = L"Ship";
 			this->shipButton->UseVisualStyleBackColor = true;
@@ -205,10 +207,10 @@ namespace Warhouse {
 			// 
 			// orderButton
 			// 
-			this->orderButton->Location = System::Drawing::Point(11, 146);
+			this->orderButton->Location = System::Drawing::Point(12, 182);
 			this->orderButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->orderButton->Name = L"orderButton";
-			this->orderButton->Size = System::Drawing::Size(110, 50);
+			this->orderButton->Size = System::Drawing::Size(124, 62);
 			this->orderButton->TabIndex = 6;
 			this->orderButton->Text = L"Order";
 			this->orderButton->UseVisualStyleBackColor = true;
@@ -216,10 +218,10 @@ namespace Warhouse {
 			// 
 			// backButton
 			// 
-			this->backButton->Location = System::Drawing::Point(11, 456);
+			this->backButton->Location = System::Drawing::Point(12, 570);
 			this->backButton->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->backButton->Name = L"backButton";
-			this->backButton->Size = System::Drawing::Size(114, 50);
+			this->backButton->Size = System::Drawing::Size(128, 62);
 			this->backButton->TabIndex = 7;
 			this->backButton->Text = L"Back";
 			this->backButton->UseVisualStyleBackColor = true;
@@ -227,9 +229,9 @@ namespace Warhouse {
 			// 
 			// Display
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1510, 515);
+			this->ClientSize = System::Drawing::Size(1699, 644);
 			this->Controls->Add(this->backButton);
 			this->Controls->Add(this->orderButton);
 			this->Controls->Add(this->shipButton);

@@ -80,18 +80,22 @@ namespace Warhouse {
 			// warehousDisplayListBox
 			// 
 			this->warehousDisplayListBox->FormattingEnabled = true;
+			this->warehousDisplayListBox->HorizontalScrollbar = true;
 			this->warehousDisplayListBox->ItemHeight = 20;
 			this->warehousDisplayListBox->Location = System::Drawing::Point(12, 12);
 			this->warehousDisplayListBox->Name = L"warehousDisplayListBox";
+			this->warehousDisplayListBox->ScrollAlwaysVisible = true;
 			this->warehousDisplayListBox->Size = System::Drawing::Size(459, 384);
 			this->warehousDisplayListBox->TabIndex = 0;
 			// 
 			// usersDisplayListBox
 			// 
 			this->usersDisplayListBox->FormattingEnabled = true;
+			this->usersDisplayListBox->HorizontalScrollbar = true;
 			this->usersDisplayListBox->ItemHeight = 20;
 			this->usersDisplayListBox->Location = System::Drawing::Point(496, 12);
 			this->usersDisplayListBox->Name = L"usersDisplayListBox";
+			this->usersDisplayListBox->ScrollAlwaysVisible = true;
 			this->usersDisplayListBox->Size = System::Drawing::Size(489, 384);
 			this->usersDisplayListBox->TabIndex = 1;
 			// 

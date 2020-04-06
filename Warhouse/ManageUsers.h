@@ -76,9 +76,11 @@ namespace Warhouse {
 			// usersDisplayListBox
 			// 
 			this->usersDisplayListBox->FormattingEnabled = true;
+			this->usersDisplayListBox->HorizontalScrollbar = true;
 			this->usersDisplayListBox->ItemHeight = 20;
 			this->usersDisplayListBox->Location = System::Drawing::Point(12, 12);
 			this->usersDisplayListBox->Name = L"usersDisplayListBox";
+			this->usersDisplayListBox->ScrollAlwaysVisible = true;
 			this->usersDisplayListBox->Size = System::Drawing::Size(446, 584);
 			this->usersDisplayListBox->TabIndex = 0;
 			// 

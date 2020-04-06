@@ -217,9 +217,11 @@ namespace Warhouse {
 			// orderDisplayListBox
 			// 
 			this->orderDisplayListBox->FormattingEnabled = true;
+			this->orderDisplayListBox->HorizontalScrollbar = true;
 			this->orderDisplayListBox->ItemHeight = 20;
 			this->orderDisplayListBox->Location = System::Drawing::Point(12, 197);
 			this->orderDisplayListBox->Name = L"orderDisplayListBox";
+			this->orderDisplayListBox->ScrollAlwaysVisible = true;
 			this->orderDisplayListBox->Size = System::Drawing::Size(430, 244);
 			this->orderDisplayListBox->TabIndex = 17;
 			// 
