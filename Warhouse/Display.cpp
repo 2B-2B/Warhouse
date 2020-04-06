@@ -37,9 +37,6 @@ void Warhouse::Display::getWarehouseInventory() {
 
 	// setting the array of the users;
 	getNumberOfItems(&warehouseData);
-	
-	
-	std::cout << "number of items: " << *(numberOfItems + 0) << ", " << *(numberOfItems + 1) << ", " << *(numberOfItems + 2) << ", " << *(numberOfItems + 3) << ", " << *(numberOfItems + 4) << std::endl;
 
 	//create the number of objects for each type
 	dimentionalWood = new Dimentional[*(numberOfItems + 1)];
@@ -67,7 +64,6 @@ void Warhouse::Display::getWarehouseInventory() {
 			//read the type of item it is
 			std::getline(warehouseData, *tempType, ',');
 
-			std::cout << *tempType;
 			//create the proper object base on the item type
 			//dementional wood
 			if (*tempType == "dimentional") {

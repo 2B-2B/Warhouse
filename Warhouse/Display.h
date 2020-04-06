@@ -28,10 +28,6 @@ namespace Warhouse {
 		int* thisGui = nullptr;
 		bool* thisXPushed = nullptr;
 		bool* isGeneral = nullptr;
-
-		//pointer to the objects
-		//Dimentional* twoByFour = nullptr;
-		//Dimentional* fourByFour = nullptr;
 		
 		//the current logged in user
 		Users* currentUser;
@@ -46,13 +42,6 @@ namespace Warhouse {
 		int* numberOfItems;
 
 
-
-
-
-
-
-
-
 	public:
 		Display(void)
 		{
@@ -63,7 +52,7 @@ namespace Warhouse {
 		}
 
 		//non default constructer
-		Display(int* gui, bool* xPushed, bool* isGeneral, Users* currentUser) {
+		Display(int* gui, bool* xPushed, bool* isGeneral, Users* currentUser, Warehouse* currentWarehouse) {
 			
 			InitializeComponent();
 
@@ -74,14 +63,12 @@ namespace Warhouse {
 
 			//seeting the current user
 			this->currentUser = currentUser;
+			//create the warehouse object
+			//this->usersWarehouse = currentWarehouse;
 
 
-
-			//Dimentional twoByFour = Dimentional(2, 4, 8, "pressure treated", 6.50, 500);
-		   // Dimentional fourByFour = Dimentional(4, 4, 8, "pressure treated", 10.50, 300);
-
-		   // this->twoByFour = &twoByFour;
-		   // this->fourByFour = &fourByFour;
+			//create the warehouse object
+			//usersWarehouse = new Warehouse(currentUser->getAddress(), currentUser->getCity(), currentUser->getProvince(), currentUser->getPostalCode());
 
 		}
 		
@@ -90,7 +77,6 @@ namespace Warhouse {
 		void getWarehouseInventory();
 		void getNumberOfItems(std::ifstream* userData);
 
-		//void getUsersWarehouse(Users** currentUsers )
 
 	protected:
 		
@@ -280,13 +266,7 @@ private: System::Void backButton_Click(System::Object^ sender, System::EventArgs
 }
 	    //Initalizing the gui with the values from the data base
 private: System::Void Display_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
-	
-	//reinitalize the two by four with the current values of the 
-	//*twoByFour = Dimentional(2, 4, 8, "pressure treated", 6.50, 500);
-	//*fourByFour = Dimentional(4, 4, 8, "pressure treated", 10.50, 300);
 
-	
-	//create the warehouse object
 	usersWarehouse = new Warehouse(currentUser->getAddress(), currentUser->getCity(), currentUser->getProvince(), currentUser->getPostalCode());
 
 	//display the info of the warehouse on the screen
@@ -298,9 +278,7 @@ private: System::Void Display_VisibleChanged(System::Object^ sender, System::Eve
 	//get the inventory from the warehouse
 	getWarehouseInventory();
 
-	std::cout << "\n~~~~here~~~~\n";
-	std::cout << usersWarehouse->printTotalInventoryToFile(*(numberOfItems+1), *(numberOfItems+2),*(numberOfItems+3),*(numberOfItems+4));
-
+	//to display all objects to the display list
 	for (int i = 0; i < numberOfItems[1]; i++) {
 		itemDisplayListBox->Items->Add(usersWarehouse->dimentionalWood[i].printToDisplay());
 	}
@@ -317,12 +295,6 @@ private: System::Void Display_VisibleChanged(System::Object^ sender, System::Eve
 		itemDisplayListBox->Items->Add(usersWarehouse->finishingWood[i].printToDisplay());
 	}
 
-
-
-	//itemDisplayListBox->Items->Add()
-
-
-	//itemDisplayListBox->Items->Add(usersWarehouse->printTotalInventoryToGUI(*(numberOfItems + 1), *(numberOfItems + 2), *(numberOfItems + 3), *(numberOfItems + 4)));
 
 }
 

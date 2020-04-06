@@ -12,6 +12,7 @@
 
 //Driver classes
 #include "Users.h"
+#include "Warehouse.h"
 
 //Standar libs.
 #include <iostream>
@@ -37,6 +38,7 @@ int main() {
 
 	//this will store the user that is logged in
 	Users currentUser;
+	Warehouse currentWarehouse;
 	
 	//Constantly Opens and deletes guis while the program is runing
 	while (!close)
@@ -73,7 +75,7 @@ int main() {
 		}
 		else if (gui == 4) { //Runs the Display gui
 
-			Warhouse::Display^ display = gcnew Warhouse::Display(&gui, &xPushed, &isGeneral, &currentUser); //Creates an intance of the Display gui
+			Warhouse::Display^ display = gcnew Warhouse::Display(&gui, &xPushed, &isGeneral, &currentUser, &currentWarehouse); //Creates an intance of the Display gui
 			Application::Run(display); //Runs the instance of the Display gui NOTE: this pauses the thread untill the gui is closed
 			(xPushed) ? close = true : xPushed = true; //After the gui is closed checks if the program should exit
 			delete  display; //Deleats the intance of the Display gui
