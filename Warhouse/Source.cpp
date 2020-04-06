@@ -35,10 +35,14 @@ int main() {
 	bool close = false; //Flag for ending the program when the gui is closed
 	bool xPushed = true; //Flag for closing the gui via the x button (This is done incase of a need for additional logic on close)
 	bool isGeneral = true;
+	std::string associatedInventory;
+	
 
 	//this will store the user that is logged in
 	Users currentUser;
 	Warehouse currentWarehouse;
+	int numberOfItems[5] = { 0,0,0,0,0 };
+
 	
 	//Constantly Opens and deletes guis while the program is runing
 	while (!close)
@@ -75,10 +79,17 @@ int main() {
 		}
 		else if (gui == 4) { //Runs the Display gui
 
-			Warhouse::Display^ display = gcnew Warhouse::Display(&gui, &xPushed, &isGeneral, &currentUser, &currentWarehouse); //Creates an intance of the Display gui
+			Warhouse::Display^ display = gcnew Warhouse::Display(&gui, &xPushed, &isGeneral, &currentUser, &currentWarehouse, numberOfItems); //Creates an intance of the Display gui
 			Application::Run(display); //Runs the instance of the Display gui NOTE: this pauses the thread untill the gui is closed
 			(xPushed) ? close = true : xPushed = true; //After the gui is closed checks if the program should exit
 			delete  display; //Deleats the intance of the Display gui
+
+			std::cout << "end of display\n";
+			std::cout << numberOfItems[0] << std::endl;
+
+			std::cout << currentWarehouse.dimentionalWood[0].getAmount();
+			
+
 		}
 		else if (gui == 5) { //Runs the Login gui
 
@@ -96,6 +107,8 @@ int main() {
 				isGeneral = false;
 			}
 
+			std::cout << currentUser.getAddress();
+			//associatedInventory = currentUser.printToFile();
 
 		}
 		else if (gui == 6) { //Runs the ManageUsers gui
@@ -111,13 +124,13 @@ int main() {
 			delete manageWarehouses; //Deleats the intance of the ManageWarehouses gui
 		}
 		else if (gui == 8) { //Runs the Order gui
-			Warhouse::Order^ order = gcnew Warhouse::Order(&gui, &xPushed); //Creates an intance of the Order gui
+			Warhouse::Order^ order = gcnew Warhouse::Order(&gui, &xPushed, &currentWarehouse, numberOfItems); //Creates an intance of the Order gui
 			Application::Run(order); //Runs the instance of the Order gui NOTE: this pauses the thread untill the gui is closed
 			(xPushed) ? close = true : xPushed = true; //After the gui is closed checks if the program should exit
 			delete order; //Deleats the intance of the Order gui
 		}
 		else if (gui == 9) { //Runs the Ship gui
-			Warhouse::Ship^ ship = gcnew Warhouse::Ship(&gui, &xPushed); //Creates an intance of the Ship gui
+			Warhouse::Ship^ ship = gcnew Warhouse::Ship(&gui, &xPushed, &currentWarehouse, numberOfItems); //Creates an intance of the Ship gui
 			Application::Run(ship); //Runs the instance of the Ship gui NOTE: this pauses the thread untill the gui is closed
 			(xPushed) ? close = true : xPushed = true; //After the gui is closed checks if the program should exit
 			delete ship; //Deleats the intance of the Ship gui

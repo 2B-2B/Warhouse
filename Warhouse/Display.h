@@ -34,6 +34,7 @@ namespace Warhouse {
 
 		//the warehous of the currently logged in user
 		Warehouse* usersWarehouse;
+		Warehouse* currentWarehouse;
 		Dimentional* dimentionalWood;
 		Plywood* plywoodWood;
 		Rail* railWood;
@@ -52,7 +53,7 @@ namespace Warhouse {
 		}
 
 		//non default constructer
-		Display(int* gui, bool* xPushed, bool* isGeneral, Users* currentUser, Warehouse* currentWarehouse) {
+		Display(int* gui, bool* xPushed, bool* isGeneral, Users* currentUser, Warehouse* currentWarehouse, int* numberOfItems) {
 			
 			InitializeComponent();
 
@@ -64,7 +65,8 @@ namespace Warhouse {
 			//seeting the current user
 			this->currentUser = currentUser;
 			//create the warehouse object
-			//this->usersWarehouse = currentWarehouse;
+			this->currentWarehouse = currentWarehouse;
+			this->numberOfItems = numberOfItems;
 
 
 			//create the warehouse object
@@ -240,6 +242,12 @@ namespace Warhouse {
 
 		//Closes the gui and goes to the Order gui 
 private: System::Void orderButton_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+	currentWarehouse->setDimentionalWood(*usersWarehouse->dimentionalWood);
+	currentWarehouse->setPlywoodWood(*usersWarehouse->plywoodWood);
+	currentWarehouse->setRailWood(*usersWarehouse->railWood);
+	currentWarehouse->setFinishingWood(*usersWarehouse->finishingWood);
+	
 	*thisXPushed = false; //Tells the driver program that the gui was not closed
 	*thisGui = 8; //Sets gui to open Order
 	this->Close(); //Closes this gui
@@ -247,6 +255,10 @@ private: System::Void orderButton_Click(System::Object^ sender, System::EventArg
 	    //Closes the gui and goes to the Ship gui 
 private: System::Void shipButton_Click(System::Object^ sender, System::EventArgs^ e) {
 
+	currentWarehouse->setDimentionalWood(*usersWarehouse->dimentionalWood);
+	currentWarehouse->setPlywoodWood(*usersWarehouse->plywoodWood);
+	currentWarehouse->setRailWood(*usersWarehouse->railWood);
+	currentWarehouse->setFinishingWood(*usersWarehouse->finishingWood);
 
 
 	*thisXPushed = false; //Tells the driver program that the gui was not closed
@@ -267,6 +279,7 @@ private: System::Void backButton_Click(System::Object^ sender, System::EventArgs
 	    //Initalizing the gui with the values from the data base
 private: System::Void Display_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
 
+	//assing to the warehouse of the logged in user
 	usersWarehouse = new Warehouse(currentUser->getAddress(), currentUser->getCity(), currentUser->getProvince(), currentUser->getPostalCode());
 
 	//display the info of the warehouse on the screen

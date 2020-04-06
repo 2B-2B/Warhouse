@@ -36,7 +36,7 @@ Class Warhouse.AdminConsole: AutoLayout, AnsiClass, Class, Public, BeforeFieldIn
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Warhouse.Display: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(Int32*, Boolean*, Boolean*, Users*, Warehouse*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32*, Boolean*, Boolean*, Users*, Warehouse*, Int32*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
     getWarehouseInventory(): PrivateScope, Public, HideBySig
@@ -55,9 +55,9 @@ Class Warhouse.ManageWarehouses: AutoLayout, AnsiClass, Class, Public, BeforeFie
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Warhouse.Order: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(Int32*, Boolean*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32*, Boolean*, Warehouse*, Int32*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Warhouse.Ship: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(Int32*, Boolean*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32*, Boolean*, Warehouse*, Int32*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

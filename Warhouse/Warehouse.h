@@ -91,9 +91,9 @@ public:
 
 	//print the inventory in GUI format
 	//std::string printDimentionalWoodToGUI();
-	std::string printPlywoodWoodToGUI(int numberOfTypes);
-	std::string printRailWoodToGUI(int numberOfTypes);
-	std::string printFinishingWoodToGUI(int numberOfTypes);
+	//std::string printPlywoodWoodToGUI(int numberOfTypes);
+	//std::string printRailWoodToGUI(int numberOfTypes);
+	//std::string printFinishingWoodToGUI(int numberOfTypes);
 
 	//print all the inventory in file format
 	std::string printTotalInventoryToFile(int numberOfDimensionalTypes, int numberOfPlywoodTypes, int numberOfRailTypes, int numberOfFinishingTypes);

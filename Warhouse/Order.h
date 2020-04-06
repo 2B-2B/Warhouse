@@ -1,6 +1,11 @@
 #pragma once
 
+#include "Warehouse.h"
+
 namespace Warhouse {
+
+
+
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -14,6 +19,11 @@ namespace Warhouse {
 	/// </summary>
 	public ref class Order : public System::Windows::Forms::Form
 	{
+	private:
+		Warehouse* currentWarehouse;
+		int* numberOfItems;
+
+
 		//Variable declaration
 		int* thisGui = nullptr;
 	private: System::Windows::Forms::NumericUpDown^ woodTypeFourSpinner;
@@ -26,6 +36,9 @@ namespace Warhouse {
 	private: System::Windows::Forms::Button^ addButton;
 		   bool* thisXPushed = nullptr;
 	public:
+
+
+
 		Order(void)
 		{
 			InitializeComponent();
@@ -33,7 +46,7 @@ namespace Warhouse {
 			//TODO: Add the constructor code here
 			//
 		}
-		Order(int* gui, bool* xPushed)
+		Order(int* gui, bool* xPushed,Warehouse* currentWarehouse, int* numberOfItems)
 		{
 			InitializeComponent();
 			//
@@ -41,6 +54,10 @@ namespace Warhouse {
 			//
 			thisGui = gui;
 			thisXPushed = xPushed;
+
+			this->currentWarehouse = currentWarehouse;
+			this->numberOfItems = numberOfItems;
+
 		}
 
 	protected:

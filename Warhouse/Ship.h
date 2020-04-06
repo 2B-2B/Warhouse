@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Warehouse.h"
+
 namespace Warhouse {
 
 	using namespace System;
@@ -14,6 +16,12 @@ namespace Warhouse {
 	/// </summary>
 	public ref class Ship : public System::Windows::Forms::Form
 	{
+	private:
+		Warehouse* currentWarehouse;
+		int* numberOfItems;
+
+
+
 		//Variable declaration
 		int* thisGui = nullptr;
 	private: System::Windows::Forms::ListBox^ shipDisplayListBox;
@@ -40,7 +48,7 @@ namespace Warhouse {
 			//TODO: Add the constructor code here
 			//
 		}
-		Ship(int* gui, bool* xPushed)
+		Ship(int* gui, bool* xPushed, Warehouse* currentWarehouse, int* numberOfItems)
 		{
 			InitializeComponent();
 			//
@@ -48,6 +56,10 @@ namespace Warhouse {
 			//
 			thisGui = gui;
 			thisXPushed = xPushed;
+
+			this->currentWarehouse = currentWarehouse;
+			this->numberOfItems = numberOfItems;
+
 		}
 
 	protected:
@@ -68,11 +80,6 @@ namespace Warhouse {
 	private: System::Windows::Forms::Button^ shipButton;
 
 	private: System::Windows::Forms::Button^ cancelButton;
-
-
-
-
-
 
 
 	private:
@@ -293,9 +300,31 @@ private: System::Void shipButton_Click(System::Object^ sender, System::EventArgs
 }
     //Initalizing the gui with the values from the data base
 private: System::Void Ship_VisibleChanged(System::Object^ sender, System::EventArgs^ e) {
-	//
-	//TODO: Add initalization code
-	//
+
+	std::cout << "\nin ship\n";
+	//std::cout << currentWarehouse->printTotalInventoryToFile(numberOfItems[1], numberOfItems[2], numberOfItems[3], numberOfItems[4]);
+	std::cout << numberOfItems[0];
+
+
+	//to display all objects to the display list
+	for (int i = 0; i < numberOfItems[1]; i++) {
+		shipDisplayListBox->Items->Add(currentWarehouse->dimentionalWood[i].printToDisplay());
+	}
+
+	for (int i = 0; i < numberOfItems[2]; i++) {
+		shipDisplayListBox->Items->Add(currentWarehouse->plywoodWood[i].printToDisplay());
+	}
+
+	for (int i = 0; i < numberOfItems[3]; i++) {
+		shipDisplayListBox->Items->Add(currentWarehouse->railWood[i].printToDisplay());
+	}
+
+	for (int i = 0; i < numberOfItems[4]; i++) {
+		shipDisplayListBox->Items->Add(currentWarehouse->finishingWood[i].printToDisplay());
+	}
+	
+	
+	
 }
 
 	   //Adds the selected wood changes to the shipment display and logs them to be changed in the text file

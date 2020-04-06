@@ -181,7 +181,7 @@ void Warhouse::Display::getWarehouseInventory() {
 void Warhouse::Display::getNumberOfItems(std::ifstream* warehouseData) {
 
 	//0 total, 1 dimentional, 2 plywood, 3 rail, 4 finishing
-	numberOfItems = new int[5]{ 0,0,0,0,0};
+	
 	
 
 	std::unique_ptr<std::string> tempType(new std::string);
