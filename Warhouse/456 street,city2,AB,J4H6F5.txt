@@ -1,2 +1,5 @@
 dimentional,4,4,1,6.00,25
 dimentional,8,8,0.5,12.00,20
+plywood,4,8,0.25,50,15
+rail,10,0.2,maple,sprial,15.50,115
+finishing,12,2,oak,funky,6,60

@@ -44,12 +44,15 @@ Dimentional::Dimentional(Dimentional& dimentionalWood) {
 }
 
 //prints the dimensions as a standard string
-std::string Dimentional::printDimensions() {
-	return std::to_string(length) + "X" + std::to_string(width) + " - " + std::to_string(height) + "'";
+std::string Dimentional::printToFile() {
+	return std::to_string(length) + "," + std::to_string(width) + "," + std::to_string(height) + "," + Wood::printToFile();
 }
 
-//prints the dimensions as a system string
-System::String^ Dimentional::getDimentionSS() {
-	System::String^ ss = gcnew System::String(printDimensions().c_str());
+//print to the GUI
+System::String^ Dimentional::printToDisplay() {
+
+	System::String^ ss = gcnew System::String((std::to_string(length) + "in X " + std::to_string(width) + "in - " + std::to_string(height) + "ft @ " + Wood::printToDisplay()).c_str());
+	
 	return ss;
 }
+

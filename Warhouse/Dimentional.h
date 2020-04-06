@@ -33,8 +33,14 @@ public:
 
 	//mutators
 	void setLength(double l) { length = l; }
-	void setWidth(double w) { width = 2; }
+	void setWidth(double w) { width = w; }
 	void setHeight(double h) { height = h; }
+
+	//set as strings
+	void setLength(std::string l) { length = stof(l); }
+	void setWidth(std::string w) { width = stof(w); }
+	void setHeight(std::string h) { height = stof(h); }
+
 	
 	//accessors
 	double getLength() const { return length; }
@@ -44,16 +50,8 @@ public:
 
 	
 	//print the dimensions as a standrad string
-	std::string printDimensions();	//this function combines all dimentions and outputs as a string
-
-	//print the dimensions as a system string 
-	System::String^ getDimentionSS();
-
-
-	//assingmen operator
-
-	//Dimentional operator = (Dimentional&);
-
+	std::string printToFile();	//this function combines all dimentions and outputs as a string
+	System::String^ printToDisplay();
 
 };
 

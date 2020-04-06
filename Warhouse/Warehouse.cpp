@@ -96,20 +96,6 @@ Warehouse::Warehouse(std::string address, std::string city, std::string province
 
 }
 
-//overloaded construter, with a dimentional wood & standard string
-//Warehouse::Warehouse(std::string address, std::string province, std::string postalCode, Dimentional dimentionalWood):Dimentional(dimentionalWood) {
-
-//	*this = Warehouse(address, province, postalCode);
-
-//}
-
-//overloaded construter, with a dimentional wood & system string
-//Warehouse::Warehouse(System::String^ address, System::String^ province, System::String^ postalCode, Dimentional dimentionalWood) :Dimentional(dimentionalWood) {
-
-//	*this = Warehouse(address, province, postalCode);
-
-//}
-
 
 //set the dimentionalwoof of the warehouse;
 void Warehouse::setDimentionalWood(Dimentional& dimentionalWood) {
@@ -138,3 +124,121 @@ void Warehouse::setFinishingWood(Finishing& finishingWood) {
 	this->finishingWood = &finishingWood;
 
 }
+
+//print all the dimentional values stored
+std::string Warehouse::printDimentionalWoodToFile(int numberOfTypes) {
+
+	std::string text = "";
+
+	for (int i = 0; i < numberOfTypes; i++) {
+
+		text += (dimentionalWood + i)->printToFile();
+	}
+	return text;
+}
+
+//print all the playwood values stored
+std::string Warehouse::printPlywoodWoodToFile(int numberOfTypes) {
+
+	std::string text = "";
+
+	for (int i = 0; i < numberOfTypes; i++) {
+
+		text += (plywoodWood + i)->printToFile();
+	}
+	return text;
+}
+
+//print all the rail values stored
+std::string Warehouse::printRailWoodToFile(int numberOfTypes) {
+
+	std::string text = "";
+
+	for (int i = 0; i < numberOfTypes; i++) {
+
+		text += (railWood + i)->printToFile();
+	}
+	return text;
+}
+
+//print all the finishing values stored
+std::string Warehouse::printFinishingWoodToFile(int numberOfTypes){
+
+	std::string text = "";
+
+	for (int i = 0; i < numberOfTypes; i++) {
+
+		text += (finishingWood + i)->printToFile();
+	}
+	return text;
+}
+
+//print all the items stored in file format
+std::string Warehouse::printTotalInventoryToFile(int numberOfDimensionalTypes, int numberOfPlywoodTypes, int numberOfRailTypes, int numberOfFinishingTypes) {
+
+	return printDimentionalWoodToFile(numberOfDimensionalTypes) + printPlywoodWoodToFile(numberOfPlywoodTypes) + printRailWoodToFile(numberOfRailTypes) + printFinishingWoodToFile(numberOfFinishingTypes);
+}
+
+
+
+///////////////////////////////////
+//~~~~~~~~~~ DEPRICATED ~~~~~~~~//
+/////////////////////////////////
+
+//print all the dimentional values stored
+/*
+std::string Warehouse::printDimentionalWoodToGUI() {
+
+	return dimentionalWood->printToDisplay();
+}
+
+//print all the playwood values stored
+std::string Warehouse::printPlywoodWoodToGUI(int numberOfTypes) {
+
+	std::string text = "";
+
+	for (int i = 0; i < numberOfTypes; i++) {
+
+		text += (plywoodWood + i)->printToDisplay();
+	}
+	return text;
+}
+
+//print all the rail values stored
+std::string Warehouse::printRailWoodToGUI(int numberOfTypes) {
+
+	std::string text = "";
+
+	for (int i = 0; i < numberOfTypes; i++) {
+
+		text += (railWood + i)->printToDisplay();
+	}
+	return text;
+}
+
+//print all the finishing values stored
+std::string Warehouse::printFinishingWoodToGUI(int numberOfTypes) {
+
+	std::string text = "";
+
+	for (int i = 0; i < numberOfTypes; i++) {
+
+		text += (finishingWood + i)->printToDisplay();
+	}
+	return text;
+}
+
+
+//print all the items stored in GUI format - not needed
+
+System::String^ Warehouse::printTotalInventoryToGUI(int numberOfDimensionalTypes, int numberOfPlywoodTypes, int numberOfRailTypes, int numberOfFinishingTypes) {
+
+	std::string temp; 
+	temp =  printPlywoodWoodToGUI(numberOfPlywoodTypes) + printRailWoodToGUI(numberOfRailTypes) + printFinishingWoodToGUI(numberOfFinishingTypes);
+	//printDimentionalWoodToGUI(numberOfDimensionalTypes) +
+
+	System::String^ ss = gcnew System::String(temp.c_str());
+
+	return ss;
+}
+*/

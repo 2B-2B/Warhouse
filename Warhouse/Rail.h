@@ -39,9 +39,12 @@ public:
 	double getThick() const { return this->height; }
 
 	//additional functions
-	std::string dimentionCombination(); //this function combines all values and dimentions into a string to output
-	System::String^ getDimentionSS();
+	std::string printToFile(); //this function combines all values and dimentions into a string to output
+	System::String^ printToDisplay();
+
+	//System::String^ getDimentionSS();
 
 };
+
 
 #endif

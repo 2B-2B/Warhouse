@@ -42,9 +42,10 @@ public:
 	
 
 	//additional functions
-	std::string dimentionCombination();	//this function combines all dimentions and outputs it as a string
+	std::string printToFile();	//this function combines all dimentions and outputs it as a string
+	System::String^ printToDisplay();
 
-	System::String^ getDimentionSS();
+	//System::String^ getDimentionSS();
 };
 
 #endif

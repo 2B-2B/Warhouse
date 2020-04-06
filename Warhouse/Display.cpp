@@ -65,8 +65,9 @@ void Warhouse::Display::getWarehouseInventory() {
 		//read and create the objects
 		for (int i = 0; i < numberOfItems[0]; i++) {
 			//read the type of item it is
-			std::getline(warehouseData, *tempType, '\t');
+			std::getline(warehouseData, *tempType, ',');
 
+			std::cout << *tempType;
 			//create the proper object base on the item type
 			//dementional wood
 			if (*tempType == "dimentional") {
@@ -85,8 +86,13 @@ void Warhouse::Display::getWarehouseInventory() {
 				std::getline(warehouseData, *price, ',');
 				std::getline(warehouseData, *availbe);
 
+				
+
 				//construct the item
 				*(dimentionalWood + *dimensionalPost) = Dimentional(*length, *wdith, *height, *price, *availbe);
+				
+				//add one to change to the next dimentionalWood
+				*dimensionalPost += 1;
 
 			}
 			else if (*tempType == "plywood") {
@@ -108,7 +114,7 @@ void Warhouse::Display::getWarehouseInventory() {
 				//construct the item
 				*(plywoodWood + *plywoodPost) = Plywood(*length, *wdith, *thick, *price, *availbe);
 
-
+				*plywoodPost += 1;
 			}
 			else if (*tempType == "rail") {
 
@@ -131,6 +137,7 @@ void Warhouse::Display::getWarehouseInventory() {
 				//construct the item
 				*(railWood + *railPost) = Rail(*length, *wdith, *material, *type, *price, *availbe);
 
+				*railPost += 1;
 			}
 			else if (*tempType == "finishing") {
 
@@ -153,6 +160,7 @@ void Warhouse::Display::getWarehouseInventory() {
 				//construct the item
 				*(finishingWood + *finishingPost) = Finishing(*length, *wdith, *material, *mouldType, *price, *availbe);
 
+				*finishingPost += 1;
 			}
 
 		}
@@ -160,12 +168,15 @@ void Warhouse::Display::getWarehouseInventory() {
 	}
 
 	//set the user warehouse inventory
+
+	//std::cout << dimentionalWood->printToDisplay();
+
 	usersWarehouse->setDimentionalWood(*dimentionalWood);
 	usersWarehouse->setPlywoodWood(*plywoodWood);
 	usersWarehouse->setRailWood(*railWood);
 	usersWarehouse->setFinishingWood(*finishingWood);
 	
-	std::cout << "leaving the inital\n";
+	//std::cout << "leaving the inital\n";
 }
 
 
