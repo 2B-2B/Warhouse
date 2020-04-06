@@ -81,6 +81,7 @@ namespace Warhouse {
 			this->warehouseDisplayListBox->ItemHeight = 20;
 			this->warehouseDisplayListBox->Location = System::Drawing::Point(12, 12);
 			this->warehouseDisplayListBox->Name = L"warehouseDisplayListBox";
+			this->warehouseDisplayListBox->ScrollAlwaysVisible = true;
 			this->warehouseDisplayListBox->Size = System::Drawing::Size(307, 584);
 			this->warehouseDisplayListBox->TabIndex = 0;
 			// 

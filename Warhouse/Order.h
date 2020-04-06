@@ -23,6 +23,7 @@ namespace Warhouse {
 	private: System::Windows::Forms::ComboBox^ woodTypeThreeComboBox;
 	private: System::Windows::Forms::ComboBox^ woodTypeFourComboBox;
 	private: System::Windows::Forms::ListBox^ orderDisplayListBox;
+	private: System::Windows::Forms::Button^ addButton;
 		   bool* thisXPushed = nullptr;
 	public:
 		Order(void)
@@ -94,6 +95,7 @@ namespace Warhouse {
 			this->woodTypeThreeComboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->woodTypeFourComboBox = (gcnew System::Windows::Forms::ComboBox());
 			this->orderDisplayListBox = (gcnew System::Windows::Forms::ListBox());
+			this->addButton = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->woodTypeOneSpinner))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->woodTypeTwoSpinner))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->woodTypeThreeSpinner))->BeginInit();
@@ -125,7 +127,7 @@ namespace Warhouse {
 			// 
 			this->cancelButton->Location = System::Drawing::Point(12, 470);
 			this->cancelButton->Name = L"cancelButton";
-			this->cancelButton->Size = System::Drawing::Size(185, 77);
+			this->cancelButton->Size = System::Drawing::Size(90, 77);
 			this->cancelButton->TabIndex = 6;
 			this->cancelButton->Text = L"Cancel";
 			this->cancelButton->UseVisualStyleBackColor = true;
@@ -133,9 +135,9 @@ namespace Warhouse {
 			// 
 			// orderButton
 			// 
-			this->orderButton->Location = System::Drawing::Point(263, 470);
+			this->orderButton->Location = System::Drawing::Point(358, 470);
 			this->orderButton->Name = L"orderButton";
-			this->orderButton->Size = System::Drawing::Size(179, 77);
+			this->orderButton->Size = System::Drawing::Size(84, 77);
 			this->orderButton->TabIndex = 7;
 			this->orderButton->Text = L"Order";
 			this->orderButton->UseVisualStyleBackColor = true;
@@ -221,11 +223,22 @@ namespace Warhouse {
 			this->orderDisplayListBox->Size = System::Drawing::Size(430, 244);
 			this->orderDisplayListBox->TabIndex = 17;
 			// 
+			// addButton
+			// 
+			this->addButton->Location = System::Drawing::Point(108, 473);
+			this->addButton->Name = L"addButton";
+			this->addButton->Size = System::Drawing::Size(244, 74);
+			this->addButton->TabIndex = 33;
+			this->addButton->Text = L"Add to Order";
+			this->addButton->UseVisualStyleBackColor = true;
+			this->addButton->Click += gcnew System::EventHandler(this, &Order::addButton_Click);
+			// 
 			// Order
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(454, 559);
+			this->Controls->Add(this->addButton);
 			this->Controls->Add(this->orderDisplayListBox);
 			this->Controls->Add(this->woodTypeFourComboBox);
 			this->Controls->Add(this->woodTypeThreeComboBox);
@@ -243,7 +256,6 @@ namespace Warhouse {
 			this->Controls->Add(this->woodTypeOneSpinner);
 			this->Name = L"Order";
 			this->Text = L"Order";
-			this->Load += gcnew System::EventHandler(this, &Order::Order_Load);
 			this->VisibleChanged += gcnew System::EventHandler(this, &Order::Order_VisibleChanged);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->woodTypeOneSpinner))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->woodTypeTwoSpinner))->EndInit();
@@ -274,6 +286,9 @@ private: System::Void Order_VisibleChanged(System::Object^ sender, System::Event
 	//
 	//TODO: Add initalization code
 	//
+}
+	   //Adds the selected wood changes to the shipment display and logs them to be changed in the text file
+private: System::Void addButton_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

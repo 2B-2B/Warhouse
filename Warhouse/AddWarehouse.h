@@ -232,6 +232,22 @@ private: System::Void addButton_Click(System::Object^ sender, System::EventArgs^
 	warehouseList << "\n" << adressString << "," << cityString << "," << provinceString << "," << postalCodeString;
 	warehouseList.close();
 
+	//Creates a new textfile for the warehouse's inventory
+	std::string fileName = adressString + "," + cityString + "," + provinceString + "," + postalCodeString + ".txt";
+	std::ofstream newTextFile;
+	newTextFile.open(fileName);
+	newTextFile << "dimentional,2,4,8,6.00,0" << std::endl;
+	newTextFile << "dimentional,2,6,8,9.00,0" << std::endl;
+	newTextFile << "dimentional,4,4,8,11.00,0" << std::endl;
+	newTextFile << "dimentional,6,6,8,14.00,0" << std::endl;
+	newTextFile << "plywood,4,8,0.25,8.00,0" << std::endl;
+	newTextFile << "plywood,4,8,0.50,10.00,0" << std::endl;
+	newTextFile << "rail,4,2,Maple,Sprial,5.00,0" << std::endl;
+	newTextFile << "rail,4,2,Oak,Smooth,3.50,0" << std::endl;
+	newTextFile << "finishing,8,2,oak,smooth,2.00,0" << std::endl;
+	newTextFile << "finishing,8,2,composite,smooth,4.00,0";
+	newTextFile.close();
+
 	*thisXPushed = false; //Tells the driver program that the gui was not closed
 	*thisGui = 7; //Closes this gui
 	this->Close();
