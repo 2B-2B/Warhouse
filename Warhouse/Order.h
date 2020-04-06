@@ -16,7 +16,14 @@ namespace Warhouse {
 	{
 		//Variable declaration
 		int* thisGui = nullptr;
-		bool* thisXPushed = nullptr;
+	private: System::Windows::Forms::NumericUpDown^ woodTypeFourSpinner;
+	private: System::Windows::Forms::TextBox^ woodTypeFourAmmountDisplayTextBox;
+	private: System::Windows::Forms::ComboBox^ woodTypeOneComboBox;
+	private: System::Windows::Forms::ComboBox^ woodTypeTwoComboBox;
+	private: System::Windows::Forms::ComboBox^ woodTypeThreeComboBox;
+	private: System::Windows::Forms::ComboBox^ woodTypeFourComboBox;
+	private: System::Windows::Forms::ListBox^ orderDisplayListBox;
+		   bool* thisXPushed = nullptr;
 	public:
 		Order(void)
 		{
@@ -46,10 +53,10 @@ namespace Warhouse {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Label^ woodTypeDisplayLabelOne;
+
 	protected:
-	private: System::Windows::Forms::Label^ woodTypeDisplayLabelTwo;
-	private: System::Windows::Forms::Label^ woodTypeDisplayLebelThree;
+
+
 	private: System::Windows::Forms::NumericUpDown^ woodTypeOneSpinner;
 	private: System::Windows::Forms::NumericUpDown^ woodTypeTwoSpinner;
 	private: System::Windows::Forms::NumericUpDown^ woodTypeThreeSpinner;
@@ -72,9 +79,6 @@ namespace Warhouse {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->woodTypeDisplayLabelOne = (gcnew System::Windows::Forms::Label());
-			this->woodTypeDisplayLabelTwo = (gcnew System::Windows::Forms::Label());
-			this->woodTypeDisplayLebelThree = (gcnew System::Windows::Forms::Label());
 			this->woodTypeOneSpinner = (gcnew System::Windows::Forms::NumericUpDown());
 			this->woodTypeTwoSpinner = (gcnew System::Windows::Forms::NumericUpDown());
 			this->woodTypeThreeSpinner = (gcnew System::Windows::Forms::NumericUpDown());
@@ -83,37 +87,18 @@ namespace Warhouse {
 			this->woodTypeOneAmmountDisplayTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->woodTypeThreeAmmountDisplayTextBox = (gcnew System::Windows::Forms::TextBox());
 			this->woodTypeTwoAmmountDisplayTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->woodTypeFourSpinner = (gcnew System::Windows::Forms::NumericUpDown());
+			this->woodTypeFourAmmountDisplayTextBox = (gcnew System::Windows::Forms::TextBox());
+			this->woodTypeOneComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->woodTypeTwoComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->woodTypeThreeComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->woodTypeFourComboBox = (gcnew System::Windows::Forms::ComboBox());
+			this->orderDisplayListBox = (gcnew System::Windows::Forms::ListBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->woodTypeOneSpinner))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->woodTypeTwoSpinner))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->woodTypeThreeSpinner))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->woodTypeFourSpinner))->BeginInit();
 			this->SuspendLayout();
-			// 
-			// woodTypeDisplayLabelOne
-			// 
-			this->woodTypeDisplayLabelOne->AutoSize = true;
-			this->woodTypeDisplayLabelOne->Location = System::Drawing::Point(12, 9);
-			this->woodTypeDisplayLabelOne->Name = L"woodTypeDisplayLabelOne";
-			this->woodTypeDisplayLabelOne->Size = System::Drawing::Size(123, 20);
-			this->woodTypeDisplayLabelOne->TabIndex = 0;
-			this->woodTypeDisplayLabelOne->Text = L"Wood Type One";
-			// 
-			// woodTypeDisplayLabelTwo
-			// 
-			this->woodTypeDisplayLabelTwo->AutoSize = true;
-			this->woodTypeDisplayLabelTwo->Location = System::Drawing::Point(12, 54);
-			this->woodTypeDisplayLabelTwo->Name = L"woodTypeDisplayLabelTwo";
-			this->woodTypeDisplayLabelTwo->Size = System::Drawing::Size(122, 20);
-			this->woodTypeDisplayLabelTwo->TabIndex = 1;
-			this->woodTypeDisplayLabelTwo->Text = L"Wood Type Two";
-			// 
-			// woodTypeDisplayLebelThree
-			// 
-			this->woodTypeDisplayLebelThree->AutoSize = true;
-			this->woodTypeDisplayLebelThree->Location = System::Drawing::Point(12, 98);
-			this->woodTypeDisplayLebelThree->Name = L"woodTypeDisplayLebelThree";
-			this->woodTypeDisplayLebelThree->Size = System::Drawing::Size(134, 20);
-			this->woodTypeDisplayLebelThree->TabIndex = 2;
-			this->woodTypeDisplayLebelThree->Text = L"Wood Type Three";
 			// 
 			// woodTypeOneSpinner
 			// 
@@ -180,11 +165,74 @@ namespace Warhouse {
 			this->woodTypeTwoAmmountDisplayTextBox->Size = System::Drawing::Size(50, 26);
 			this->woodTypeTwoAmmountDisplayTextBox->TabIndex = 10;
 			// 
+			// woodTypeFourSpinner
+			// 
+			this->woodTypeFourSpinner->Location = System::Drawing::Point(268, 145);
+			this->woodTypeFourSpinner->Name = L"woodTypeFourSpinner";
+			this->woodTypeFourSpinner->Size = System::Drawing::Size(174, 26);
+			this->woodTypeFourSpinner->TabIndex = 11;
+			// 
+			// woodTypeFourAmmountDisplayTextBox
+			// 
+			this->woodTypeFourAmmountDisplayTextBox->Location = System::Drawing::Point(179, 144);
+			this->woodTypeFourAmmountDisplayTextBox->Name = L"woodTypeFourAmmountDisplayTextBox";
+			this->woodTypeFourAmmountDisplayTextBox->ReadOnly = true;
+			this->woodTypeFourAmmountDisplayTextBox->Size = System::Drawing::Size(50, 26);
+			this->woodTypeFourAmmountDisplayTextBox->TabIndex = 12;
+			// 
+			// woodTypeOneComboBox
+			// 
+			this->woodTypeOneComboBox->FormattingEnabled = true;
+			this->woodTypeOneComboBox->Location = System::Drawing::Point(12, 9);
+			this->woodTypeOneComboBox->Name = L"woodTypeOneComboBox";
+			this->woodTypeOneComboBox->Size = System::Drawing::Size(143, 28);
+			this->woodTypeOneComboBox->TabIndex = 13;
+			// 
+			// woodTypeTwoComboBox
+			// 
+			this->woodTypeTwoComboBox->FormattingEnabled = true;
+			this->woodTypeTwoComboBox->Location = System::Drawing::Point(12, 54);
+			this->woodTypeTwoComboBox->Name = L"woodTypeTwoComboBox";
+			this->woodTypeTwoComboBox->Size = System::Drawing::Size(143, 28);
+			this->woodTypeTwoComboBox->TabIndex = 14;
+			// 
+			// woodTypeThreeComboBox
+			// 
+			this->woodTypeThreeComboBox->FormattingEnabled = true;
+			this->woodTypeThreeComboBox->Location = System::Drawing::Point(12, 96);
+			this->woodTypeThreeComboBox->Name = L"woodTypeThreeComboBox";
+			this->woodTypeThreeComboBox->Size = System::Drawing::Size(143, 28);
+			this->woodTypeThreeComboBox->TabIndex = 15;
+			// 
+			// woodTypeFourComboBox
+			// 
+			this->woodTypeFourComboBox->FormattingEnabled = true;
+			this->woodTypeFourComboBox->Location = System::Drawing::Point(12, 142);
+			this->woodTypeFourComboBox->Name = L"woodTypeFourComboBox";
+			this->woodTypeFourComboBox->Size = System::Drawing::Size(143, 28);
+			this->woodTypeFourComboBox->TabIndex = 16;
+			// 
+			// orderDisplayListBox
+			// 
+			this->orderDisplayListBox->FormattingEnabled = true;
+			this->orderDisplayListBox->ItemHeight = 20;
+			this->orderDisplayListBox->Location = System::Drawing::Point(12, 197);
+			this->orderDisplayListBox->Name = L"orderDisplayListBox";
+			this->orderDisplayListBox->Size = System::Drawing::Size(430, 244);
+			this->orderDisplayListBox->TabIndex = 17;
+			// 
 			// Order
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(454, 559);
+			this->Controls->Add(this->orderDisplayListBox);
+			this->Controls->Add(this->woodTypeFourComboBox);
+			this->Controls->Add(this->woodTypeThreeComboBox);
+			this->Controls->Add(this->woodTypeTwoComboBox);
+			this->Controls->Add(this->woodTypeOneComboBox);
+			this->Controls->Add(this->woodTypeFourAmmountDisplayTextBox);
+			this->Controls->Add(this->woodTypeFourSpinner);
 			this->Controls->Add(this->woodTypeTwoAmmountDisplayTextBox);
 			this->Controls->Add(this->woodTypeThreeAmmountDisplayTextBox);
 			this->Controls->Add(this->woodTypeOneAmmountDisplayTextBox);
@@ -193,15 +241,14 @@ namespace Warhouse {
 			this->Controls->Add(this->woodTypeThreeSpinner);
 			this->Controls->Add(this->woodTypeTwoSpinner);
 			this->Controls->Add(this->woodTypeOneSpinner);
-			this->Controls->Add(this->woodTypeDisplayLebelThree);
-			this->Controls->Add(this->woodTypeDisplayLabelTwo);
-			this->Controls->Add(this->woodTypeDisplayLabelOne);
 			this->Name = L"Order";
 			this->Text = L"Order";
+			this->Load += gcnew System::EventHandler(this, &Order::Order_Load);
 			this->VisibleChanged += gcnew System::EventHandler(this, &Order::Order_VisibleChanged);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->woodTypeOneSpinner))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->woodTypeTwoSpinner))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->woodTypeThreeSpinner))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->woodTypeFourSpinner))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
