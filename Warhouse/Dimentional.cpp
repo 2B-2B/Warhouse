@@ -49,15 +49,10 @@ std::string Dimentional::printToFile() {
 }
 
 //print to the GUI
-std::string Dimentional::printToDisplay() {
-	return std::to_string(length) + "in X " + std::to_string(width) + "in - " + std::to_string(height) + "ft @ " + Wood::printToDisplay();
-}
+System::String^ Dimentional::printToDisplay() {
 
-
-//prints the dimensions as a system string
-/*
-System::String^ Dimentional::getDimentionSS() {
-	System::String^ ss = gcnew System::String(printDimensions().c_str());
+	System::String^ ss = gcnew System::String((std::to_string(length) + "in X " + std::to_string(width) + "in - " + std::to_string(height) + "ft @ " + Wood::printToDisplay()).c_str());
+	
 	return ss;
 }
-*/
+

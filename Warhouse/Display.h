@@ -189,7 +189,7 @@ namespace Warhouse {
 			this->itemDisplayListBox->Location = System::Drawing::Point(196, 10);
 			this->itemDisplayListBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->itemDisplayListBox->Name = L"itemDisplayListBox";
-			this->itemDisplayListBox->Size = System::Drawing::Size(379, 500);
+			this->itemDisplayListBox->Size = System::Drawing::Size(1138, 500);
 			this->itemDisplayListBox->TabIndex = 4;
 			// 
 			// shipButton
@@ -229,7 +229,7 @@ namespace Warhouse {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(586, 515);
+			this->ClientSize = System::Drawing::Size(1510, 515);
 			this->Controls->Add(this->backButton);
 			this->Controls->Add(this->orderButton);
 			this->Controls->Add(this->shipButton);
@@ -297,7 +297,30 @@ private: System::Void Display_VisibleChanged(System::Object^ sender, System::Eve
 	getWarehouseInventory();
 
 	std::cout << "\n~~~~here~~~~\n";
-	std::cout << usersWarehouse->printTotalInventoryToGUI(*(numberOfItems+1), *(numberOfItems+2),*(numberOfItems+3),*(numberOfItems+4));
+	std::cout << usersWarehouse->printTotalInventoryToFile(*(numberOfItems+1), *(numberOfItems+2),*(numberOfItems+3),*(numberOfItems+4));
+
+	for (int i = 0; i < numberOfItems[1]; i++) {
+		itemDisplayListBox->Items->Add(usersWarehouse->dimentionalWood[i].printToDisplay());
+	}
+
+	for (int i = 0; i < numberOfItems[2]; i++) {
+		itemDisplayListBox->Items->Add(usersWarehouse->plywoodWood[i].printToDisplay());
+	}
+
+	for (int i = 0; i < numberOfItems[3]; i++) {
+		itemDisplayListBox->Items->Add(usersWarehouse->railWood[i].printToDisplay());
+	}
+
+	for (int i = 0; i < numberOfItems[4]; i++) {
+		itemDisplayListBox->Items->Add(usersWarehouse->finishingWood[i].printToDisplay());
+	}
+
+
+
+	//itemDisplayListBox->Items->Add()
+
+
+	//itemDisplayListBox->Items->Add(usersWarehouse->printTotalInventoryToGUI(*(numberOfItems + 1), *(numberOfItems + 2), *(numberOfItems + 3), *(numberOfItems + 4)));
 
 }
 

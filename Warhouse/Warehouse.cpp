@@ -173,17 +173,23 @@ std::string Warehouse::printFinishingWoodToFile(int numberOfTypes){
 	return text;
 }
 
+//print all the items stored in file format
+std::string Warehouse::printTotalInventoryToFile(int numberOfDimensionalTypes, int numberOfPlywoodTypes, int numberOfRailTypes, int numberOfFinishingTypes) {
+
+	return printDimentionalWoodToFile(numberOfDimensionalTypes) + printPlywoodWoodToFile(numberOfPlywoodTypes) + printRailWoodToFile(numberOfRailTypes) + printFinishingWoodToFile(numberOfFinishingTypes);
+}
+
+
+
+///////////////////////////////////
+//~~~~~~~~~~ DEPRICATED ~~~~~~~~//
+/////////////////////////////////
 
 //print all the dimentional values stored
-std::string Warehouse::printDimentionalWoodToGUI(int numberOfTypes) {
+/*
+std::string Warehouse::printDimentionalWoodToGUI() {
 
-	std::string text = "";
-
-	for (int i = 0; i < numberOfTypes; i++) {
-
-		text += (dimentionalWood + i)->printToDisplay();
-	}
-	return text;
+	return dimentionalWood->printToDisplay();
 }
 
 //print all the playwood values stored
@@ -223,18 +229,16 @@ std::string Warehouse::printFinishingWoodToGUI(int numberOfTypes) {
 }
 
 
+//print all the items stored in GUI format - not needed
 
+System::String^ Warehouse::printTotalInventoryToGUI(int numberOfDimensionalTypes, int numberOfPlywoodTypes, int numberOfRailTypes, int numberOfFinishingTypes) {
 
+	std::string temp; 
+	temp =  printPlywoodWoodToGUI(numberOfPlywoodTypes) + printRailWoodToGUI(numberOfRailTypes) + printFinishingWoodToGUI(numberOfFinishingTypes);
+	//printDimentionalWoodToGUI(numberOfDimensionalTypes) +
 
+	System::String^ ss = gcnew System::String(temp.c_str());
 
-//print all the items stored in file format
-std::string Warehouse::printTotalInventoryToFile(int numberOfDimensionalTypes, int numberOfPlywoodTypes, int numberOfRailTypes, int numberOfFinishingTypes) {
-
-	return printDimentionalWoodToFile(numberOfDimensionalTypes) + printPlywoodWoodToFile(numberOfPlywoodTypes) + printRailWoodToFile(numberOfRailTypes) + printFinishingWoodToFile(numberOfFinishingTypes);
+	return ss;
 }
-
-//print all the items stored in GUI format
-std::string Warehouse::printTotalInventoryToGUI(int numberOfDimensionalTypes, int numberOfPlywoodTypes, int numberOfRailTypes, int numberOfFinishingTypes) {
-
-	return printDimentionalWoodToGUI(numberOfDimensionalTypes) + printPlywoodWoodToGUI(numberOfPlywoodTypes) + printRailWoodToGUI(numberOfRailTypes) + printFinishingWoodToGUI(numberOfFinishingTypes);
-}
+*/

@@ -40,10 +40,11 @@ public:
 
 	//additional functions
 	std::string printToFile(); //this function combines all values and dimentions into a string to output
-	std::string printToDisplay();
+	System::String^ printToDisplay();
 
 	//System::String^ getDimentionSS();
 
 };
+
 
 #endif

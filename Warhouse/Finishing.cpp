@@ -57,6 +57,9 @@ std::string Finishing::printToFile() {
 }
 
 //print to the GUI
-std::string Finishing::printToDisplay() {
-	return std::to_string(length) + "ft X " + std::to_string(height) + "ft made from " + material + " type: " + mouldType + " @ " + Wood::printToDisplay();
+System::String^ Finishing::printToDisplay() {
+
+	System::String^ ss = gcnew System::String((std::to_string(length) + "ft X " + std::to_string(height) + "ft made from " + material + " type: " + mouldType + " @ " + Wood::printToDisplay()).c_str());
+
+	return ss;
 }

@@ -24,6 +24,7 @@ protected:
 	std::string province;
 	std::string postalCode;
 
+public:
 	Dimentional* dimentionalWood;
 	Plywood* plywoodWood;
 	Rail* railWood;
@@ -89,7 +90,7 @@ public:
 	std::string printFinishingWoodToFile(int numberOfTypes);
 
 	//print the inventory in GUI format
-	std::string printDimentionalWoodToGUI(int numberOfTypes);
+	//std::string printDimentionalWoodToGUI();
 	std::string printPlywoodWoodToGUI(int numberOfTypes);
 	std::string printRailWoodToGUI(int numberOfTypes);
 	std::string printFinishingWoodToGUI(int numberOfTypes);
@@ -97,8 +98,8 @@ public:
 	//print all the inventory in file format
 	std::string printTotalInventoryToFile(int numberOfDimensionalTypes, int numberOfPlywoodTypes, int numberOfRailTypes, int numberOfFinishingTypes);
 
-	//print all the inventory in GUI format
-	std::string printTotalInventoryToGUI(int numberOfDimensionalTypes, int numberOfPlywoodTypes, int numberOfRailTypes, int numberOfFinishingTypes);
+	//print all the inventory in GUI format - not needed
+	//System::String^ printTotalInventoryToGUI(int numberOfDimensionalTypes, int numberOfPlywoodTypes, int numberOfRailTypes, int numberOfFinishingTypes);
 
 };
 

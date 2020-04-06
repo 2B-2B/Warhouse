@@ -51,16 +51,7 @@ public:
 	
 	//print the dimensions as a standrad string
 	std::string printToFile();	//this function combines all dimentions and outputs as a string
-	std::string printToDisplay();
-
-	//print the dimensions as a system string 
-	//System::String^ getDimentionSS();
-
-
-	//assingmen operator
-
-	//Dimentional operator = (Dimentional&);
-
+	System::String^ printToDisplay();
 
 };
 

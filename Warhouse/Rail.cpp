@@ -55,6 +55,9 @@ std::string Rail::printToFile() {
 }
 
 //print to the GUI
-std::string Rail::printToDisplay() {
-	return std::to_string(length) + "ft X " + std::to_string(height) + "ft made from " + material + " type: " + type + " @ " + Wood::printToDisplay();
+System::String^ Rail::printToDisplay() {
+
+	System::String^ ss = gcnew System::String((std::to_string(length) + "ft X " + std::to_string(height) + "ft made from " + material + " type: " + type + " @ " + Wood::printToDisplay()).c_str());
+
+	return ss;
 }

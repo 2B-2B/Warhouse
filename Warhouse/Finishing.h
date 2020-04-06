@@ -39,7 +39,7 @@ public:
 
 	//additional functions
 	std::string printToFile();	//this function combines all dimentions and outputs it as a string
-	std::string printToDisplay();
+	System::String^ printToDisplay();
 
 	//System::String^ getDimentionSS();
 
